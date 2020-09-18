@@ -1,0 +1,55 @@
+@import "variables";
+
+.place-item{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    border-radius: 8px;
+    background-color: $rich-black;
+    position: relative;
+    box-sizing: border-box;
+    margin: 4px;
+}
+
+.place-item:before{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -1;
+}
+
+.place-item:after{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -2;
+    filter: blur(20px);
+}
+
+.place-item:before,
+.place-item:after{
+    background: linear-gradient(235deg, #89ff00, $primary-color, #00bcd4);
+    background: linear-gradient(235deg, #4a2054, #1C1F33, #025029);
+    border-radius: 9px;
+}
+
+.place-item__title{
+    margin: 4px auto;
+}
+
+.place-item__image{
+    height: 160px;
+    margin: auto;
+}
+
+.place-item__address{
+    margin: 4px auto;
+}
