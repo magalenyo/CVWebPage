@@ -46,6 +46,9 @@
     background: linear-gradient(90deg, #E91E63, #ffb74d,#00bfa5, #E91E63);
     background-size: 400%;
     position: relative;
+    margin: 8px auto;
+    display: block;
+    width: fit-content;
 }
 
 // #cvDownloadButton:hover{
@@ -72,7 +75,7 @@
     bottom: -2px;
     right: -2px;
     z-index: -1;
-    border-radius: 12px;
+    border-radius: 13px;
 }
 
 
