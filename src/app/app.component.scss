@@ -1,16 +1,93 @@
 .mainContainer{
-    margin-left: 55%;
+    // margin-left: 55%;
 }
 
 .section__item{
     margin: 24px 0;
     height: 400px;
+    padding-left: 55%;
 
     &:first-child{
         margin-top: 0;
+    }
+
+    &:last-child{
+        margin-bottom: 0;
     }
 }
 
 .profilePicture{
 
 }
+
+#formation{
+    background-color: #00bfa5;
+}
+
+#fun{
+    background-color: #E91E63;
+}
+
+#portfolio{
+    background-color: #ffb74d;
+}
+
+#cvDownloadButton{
+    background: linear-gradient(90deg, #00bfa5, #E91E63);
+    background: linear-gradient(90deg, #E91E63, #ffb74d);
+    color: #fff;
+    padding: 16px 24px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    opacity: 1;
+    font-size: 18px;
+    margin: 24px auto 0 auto;
+    background: linear-gradient(90deg, #E91E63, #ffb74d,#00bfa5, #E91E63);
+    background-size: 400%;
+    position: relative;
+}
+
+// #cvDownloadButton:hover{
+//     animation: downloadButtonAnimation 8s linear infinite;
+//     transition: .3s;
+// }
+
+#cvDownloadButton:hover{
+    background: #1C1F33;
+}
+
+#cvDownloadButton:hover:after{
+    content: ' ';
+    animation: downloadButtonAnimation 8s linear infinite;
+    transition: .3s;
+    background: linear-gradient(90deg, #E91E63, #ffb74d,#00bfa5, #E91E63);
+    background-size: 400%;
+    position: relative;
+    animation: downloadButtonAnimation 8s linear infinite;
+    transition: .3s;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    bottom: -2px;
+    right: -2px;
+    z-index: -1;
+    border-radius: 12px;
+}
+
+
+@keyframes downloadButtonAnimation{
+    0%{
+        background-position: 0%;
+    }
+
+    100%{
+        background-position: 400%;
+    }
+}
+
+
+// #cvDownloadButton:hover{
+//     transition: .3s;
+//     opacity: .7;
+// }
