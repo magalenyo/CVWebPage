@@ -31,10 +31,10 @@
 
 .header__item{
     color: #fff;
-    // margin: auto;
-    font-size: 26px;
+    font-size: 30px;
     margin-left: 30%;
     margin-right: auto;
+    margin-top: 16px;
 
     &:hover{
         color: $main-font;
@@ -52,7 +52,7 @@
 }
 
 .header__footer{
-    height: 80px;
+    height: 100px;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -61,10 +61,11 @@
 
 .header__footerWrapper{
     display: flex;
+    margin: auto;
 }
 
 .header__footerWrapper > a{
-    margin: auto;
+    margin: 12px 14px;
     fill: #fff;
 
     :hover{
@@ -94,7 +95,6 @@
 // footerGithub
 
 .footerAuthor{
-    margin-top: 16px;
     color: #7b82af;
     text-align: center;
 }
