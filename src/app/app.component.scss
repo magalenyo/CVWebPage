@@ -8,6 +8,7 @@
     padding-left: 55%;
     padding-top: 24px;
     padding-bottom: 24px;
+    padding-right: 24px;
 
     &:first-child{
         margin-top: 0;
@@ -51,6 +52,8 @@
     margin: 8px auto;
     display: block;
     width: fit-content;
+    transition: .3s;
+
 }
 
 // #cvDownloadButton:hover{
@@ -60,6 +63,7 @@
 
 #cvDownloadButton:hover{
     background: #1C1F33;
+    background: rgba(0,0,0,.4);
 }
 
 #cvDownloadButton:hover:after{
