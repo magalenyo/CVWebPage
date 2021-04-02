@@ -12,16 +12,6 @@
     overflow: hidden;
 }
 
-.header__container::before{
-    // content: ' ';
-    // width: 55%;
-    // background-color: #1C1F33;
-    // height: 100%;
-    // position: fixed;
-    // width: 55%;
-    // border-radius: 0 5000px 0 0;
-}
-
 .header__content{
     display: flex;
     flex-direction: column;
@@ -35,7 +25,9 @@
     margin-left: 30%;
     margin-right: auto;
     margin-top: 16px;
-    transition: .4s;
+    transition: .15s;
+    height: 50px;
+    line-height: 25px;
 
     &:hover{
         color: $main-font;

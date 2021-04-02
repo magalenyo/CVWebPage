@@ -1,10 +1,6 @@
-.mainContainer{
-    // margin-left: 55%;
-}
-
 .section__item{
     margin: 24px 0;
-    height: 400px;
+    min-height: 400px;
     padding-left: 55%;
     padding-top: 24px;
     padding-bottom: 24px;
@@ -20,10 +16,13 @@
 }
 
 .profilePicture{
-
+    height: 240px;
+    margin: auto;
+    display: block;
+    clip-path: circle(90px at center);
 }
 
-#formation{
+#education{
     background-color: #00bfa5;
 }
 
@@ -95,8 +94,20 @@
     }
 }
 
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    margin-bottom: 1rem;
+}
+.videoWrapper iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
 
-// #cvDownloadButton:hover{
-//     transition: .3s;
-//     opacity: .7;
-// }
+.text--bold{
+    font-weight: bold;
+}
