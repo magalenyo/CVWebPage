@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { PlaceItemComponent } from './components/place-item/place-item.component';
 import { CarouselPlacesComponent } from './components/carousel-places/carousel-places.component';
 import { ProductsCarouselComponent } from './components/products-carousel/products-carousel.component';
@@ -22,7 +23,8 @@ import { FooterComponent } from './components/footer/footer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { faCalendar } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ExperienceBCN';
+  title = 'Miguel Ángel Bueno Rivera';
+  faCalendar = faCalendar;
 }

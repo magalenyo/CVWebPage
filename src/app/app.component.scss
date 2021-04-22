@@ -1,10 +1,14 @@
+#content{
+  display: flex;
+}
+
+.mainContainer{
+  margin-left: 30%;
+}
+
 .section__item{
     margin: 24px 0;
-    min-height: 400px;
-    padding-left: 55%;
-    padding-top: 24px;
-    padding-bottom: 24px;
-    padding-right: 24px;
+    padding: 24px;
 
     &:first-child{
         margin-top: 0;
@@ -22,17 +26,17 @@
     clip-path: circle(90px at center);
 }
 
-#education{
-    background-color: #00bfa5;
-}
+// #education{
+//     background-color: #00bfa5;
+// }
 
-#fun{
-    background-color: #E91E63;
-}
+// #fun{
+//     background-color: #E91E63;
+// }
 
-#portfolio{
-    background-color: #ffb74d;
-}
+// #portfolio{
+//     background-color: #ffb74d;
+// }
 
 #cvDownloadButton{
     background: linear-gradient(90deg, #00bfa5, #E91E63);
