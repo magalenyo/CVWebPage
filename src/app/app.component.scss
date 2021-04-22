@@ -19,6 +19,16 @@
     }
 }
 
+#whoami{
+  background-image:url("../assets/images/bg.jpg");
+  background-size: 100vw;
+}
+
+#whoami > .section__wrapper{
+  background-color: #ffffffaf;
+  padding: 64px
+}
+
 .profilePicture{
     height: 240px;
     margin: auto;
