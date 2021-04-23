@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { faCalendar } from '@fortawesome/free-solid-svg-icons';
+import { faCalendarAlt, faEnvelope, faMapMarkerAlt, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -9,5 +9,8 @@ import { faCalendar } from '@fortawesome/free-solid-svg-icons';
 })
 export class AppComponent {
   title = 'Miguel Ángel Bueno Rivera';
-  faCalendar = faCalendar;
+  faCalendar = faCalendarAlt;
+  faMap = faMapMarkerAlt;
+  faMail = faEnvelope;
+  faPhone = faPhoneAlt;
 }
