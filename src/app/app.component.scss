@@ -1,3 +1,5 @@
+@import "../assets/scss/variables.scss";
+
 #content{
   display: flex;
 }
@@ -79,24 +81,25 @@
 // }
 
 #cvDownloadButton{
-    background: linear-gradient(90deg, #00bfa5, #E91E63);
-    background: linear-gradient(90deg, #E91E63, #ffb74d);
-    color: #fff;
+    color: $light-color;
     padding: 16px 24px;
     border-radius: 12px;
+    border-color: $light-color;
     text-decoration: none;
     font-weight: bold;
     opacity: 1;
     font-size: 18px;
     margin: 24px auto 0 auto;
-    background: linear-gradient(90deg, #E91E63, #ffb74d,#00bfa5, #E91E63);
+    // background: linear-gradient(90deg, #b4b4b4, #ffd08a,#b4b4b4);
+    background: $primary-color;
+    background: #fff;
     background-size: 400%;
     position: relative;
     margin: 8px auto;
     display: block;
     width: fit-content;
     transition: .3s;
-
+    border: 2px solid #45475873;
 }
 
 // #cvDownloadButton:hover{
@@ -105,15 +108,15 @@
 // }
 
 #cvDownloadButton:hover{
-    background: #1C1F33;
-    background: rgba(0,0,0,.4);
+    background: #fff;
+    // background: rgba(0,0,0,.4);
 }
 
 #cvDownloadButton:hover:after{
     content: ' ';
     animation: downloadButtonAnimation 8s linear infinite;
     transition: .3s;
-    background: linear-gradient(90deg, #E91E63, #ffb74d,#00bfa5, #E91E63);
+    background: linear-gradient(90deg, #fff, $primary-color,#fff);
     background-size: 400%;
     position: relative;
     animation: downloadButtonAnimation 8s linear infinite;
