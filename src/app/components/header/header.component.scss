@@ -16,22 +16,27 @@
     flex-direction: column;
     justify-content: center;
     height: 100%;
+    background-color: rgba(167, 154, 154, 0.1);
 }
 
 .header__item{
     color: #fff;
     font-size: 30px;
-    margin: 16px auto 0 auto;
-    transition: .15s;
+    margin: 16px auto 16px auto;
+    transition: .25s;
     height: 50px;
-    line-height: 25px;
+    // line-height: 25px;
+    line-height: 1.2;
+    text-shadow: 4px 5px 4px black;
 
     &:hover{
         color: $main-font;
 
         text-decoration: none;
         font-size: 36px;
-
+        letter-spacing: 4px;
+        border-top: 2px solid $main-font;
+        border-bottom: 2px solid $main-font;
     }
 
     // &:first-child{
@@ -42,6 +47,7 @@
     //     margin-right: 0;
     // }
 }
+
 
 .header__footer{
     height: 100px;
