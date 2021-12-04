@@ -9,7 +9,6 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "deploy": "ng build --prod --base-href=/angular-ci-cd/"
-
   },
   "private": true,
   "dependencies": {
