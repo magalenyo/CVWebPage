@@ -1,9 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 import { PlaceItemComponent } from './components/place-item/place-item.component';
 import { CarouselPlacesComponent } from './components/carousel-places/carousel-places.component';
 import { ProductsCarouselComponent } from './components/products-carousel/products-carousel.component';
@@ -24,7 +27,8 @@ import { FooterComponent } from './components/footer/footer.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    MdbCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
