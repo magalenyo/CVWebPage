@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { CarouselPlacesComponent } from './carousel-places.component';
 
@@ -6,7 +6,7 @@ describe('CarouselPlacesComponent', () => {
   let component: CarouselPlacesComponent;
   let fixture: ComponentFixture<CarouselPlacesComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ CarouselPlacesComponent ]
     })
