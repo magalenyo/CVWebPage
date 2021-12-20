@@ -55,12 +55,13 @@
           <p>If you want to see more videos, you can check our playlist <a href = "https://youtube.com/playlist?list=PLqL7Y-7Sr4iVxBafXM63IY3DBSXzyIoYY">here</a>.</p>
 
 
-          <mdb-carousel [controls]="true" [indicators]="true" [animation]="'fade'">
-            <mdb-carousel-item>
+          <mdb-carousel [controls]="true" [indicators]="true" [animation]="'fade'" class = "carousel--generic">
+            <mdb-carousel-item [interval]="10000">
               <img
                 src="assets/images/carousel-boundead/1.png"
                 class="d-block w-100"
                 alt="Sunset Over the City"
+                
               />
               <div class="carousel-caption d-none d-md-block">
                 <h5>First slide label</h5>
@@ -68,7 +69,8 @@
               </div>
             </mdb-carousel-item>
 
-            <mdb-carousel-item>
+            <mdb-carousel-item [interval]="10000"
+            >
               <img
                 src="assets/images/carousel-boundead/2.png"
                 class="d-block w-100"
@@ -92,7 +94,7 @@
               </div>
             </mdb-carousel-item>
 
-            <!-- <mdb-carousel-item>
+            <mdb-carousel-item>
               <img
                 src="assets/images/carousel-boundead/4.png"
                 class="d-block w-100"
@@ -222,7 +224,7 @@
                 <h5>First slide label</h5>
                 <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
               </div>
-            </mdb-carousel-item> -->
+            </mdb-carousel-item>
           
           </mdb-carousel>
 
