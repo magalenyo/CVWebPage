@@ -13,6 +13,7 @@ import { ProductsCarouselComponent } from './components/products-carousel/produc
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { PresentationComponent } from './components/presentation/presentation.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FooterComponent } from './components/footer/footer.component';
     CarouselPlacesComponent,
     ProductsCarouselComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    PresentationComponent
   ],
   imports: [
     BrowserModule,
