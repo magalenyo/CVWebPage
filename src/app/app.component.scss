@@ -108,10 +108,10 @@ body {
 
   // transition-duration: 1s;
   // transition: fill .4s ease;
-
-  // &:hover{
-  //   fill: red;
-  // }
+  &:hover{
+    transition-duration: 1s;
+    fill: #c4c8ff;
+  }
 }
 
 //GLITCH LINK
@@ -122,51 +122,6 @@ body {
   // height: 4em;
   // transform: translate(4.5em,3em);
   animation: glitch-middle 3s infinite;
-}
-
-@keyframes glitch-middle {
-  0%,26%,30%,72%,76%,100% { transform: translate(4.5em,3em) skew(0deg) ; box-shadow: none }
-  30%,70% {transform: translate(4.5em,3em) skew(30deg);}
-  29%,31%,69%,71% {transform: translate(4.5em,3em) skew(0deg);}
-  28%,74% { box-shadow: 
-    -0.2em 0.1em 0 0 cyan,
-    0.2em -0.1em 0 0 magenta
-  }
-}
-.glitchLink > svg:after,
-.glitchLink > svg:before {
-  display: block;
-  content: "";
-  background: #444;
-  width: 4em;
-}
-.glitchLink >svg:after {
-  height: 1.4em;
-  animation: glitch-middle-after 3s infinite;
-}
-
-@keyframes glitch-middle-after {
-  0%,34%,38%,46%,50%,100% { transform: translate(0,1em); box-shadow: none; }
-  36%,48% { transform: translate(0.4em,0em);
-  box-shadow: 
-    -1em 0 0 0 cyan,
-    1em 0 0 0 magenta,
-    0.5em 1em 0 -0.8em cyan
-  }
-}
-
-.glitchLink >svg:before {
-  height: 1em;
-  transform: translate(0em,3em);
-  animation: glitch-middle-before 3s infinite;
-}
-
-@keyframes glitch-middle-before {
-  0%,30%,34%,50%,54%,100% { transform: translate(0,0); box-shadow: none; }
-  32%,52% { transform: translate(-0.4em,1em);
-  box-shadow: 
-    -0.3em 0 0 0 red,
-    0.3em 0 0 0 yellow}
 }
 
 //GLITCH FOOTER
@@ -201,7 +156,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  fill: #fff;
+  // fill: #fff;
   background: #000;
   width: 24px;
   height: 24px;
