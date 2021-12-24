@@ -1,192 +1,367 @@
 @import "../assets/scss/variables.scss";
 
-#content{
-  display: flex;
+// #content{
+//   display: flex;
+// }
+
+// .mainContainer{
+//   width: 100%;
+//   margin-left: 30%;
+// }
+
+// .section__item{
+//     margin: 24px 0;
+//     padding: 24px;
+
+//     &:first-child{
+//         margin-top: 0;
+//     }
+
+//     &:last-child{
+//         margin-bottom: 0;
+//     }
+// }
+
+// #whoami{
+//   // background-image:url("../assets/images/bg.jpg");
+//   // background-size: 100vw;
+// }
+
+// #whoami > .section__wrapper{
+//   background-color: #ffffffaf;
+//   padding: 64px;
+//   box-shadow: 0px 0px 1px #b7b7b7, 0px 0px 12px #b7b7b7;
+//   text-align: center;
+//   display: flex;
+//   flex-direction: column;
+// }
+
+// #whoami h1{
+//   font-weight: bold;
+//   margin-bottom: 20px;
+// }
+
+// #whoami h6{
+//   margin: 0;
+//   font-weight: bold;
+// }
+
+// .bioWrapper{
+//   width: 55%;
+//   margin: 16px auto;
+//   max-width: 300px;
+// }
+
+// .bio{
+//   display: grid;
+//   grid-template-columns: 35% 65%;
+//   margin: 0 auto;
+//   text-align: left;
+// }
+
+// .bio > p:nth-child(odd){
+//   font-weight: bold;
+// }
+
+// .bio > p:nth-child(even){
+//   text-align: right;
+// }
+
+// .profilePicture{
+//     height: 240px;
+//     margin: auto;
+//     display: block;
+//     clip-path: circle(90px at center);
+// }
+
+// // #education{
+// //     background-color: #00bfa5;
+// // }
+
+// // #fun{
+// //     background-color: #E91E63;
+// // }
+
+// // #portfolio{
+// //     background-color: #ffb74d;
+// // }
+
+// #cvDownloadButton{
+//     color: $light-color;
+//     padding: 16px 24px;
+//     border-radius: 12px;
+//     border-color: $light-color;
+//     text-decoration: none;
+//     font-weight: bold;
+//     opacity: 1;
+//     font-size: 18px;
+//     margin: 24px auto 0 auto;
+//     // background: linear-gradient(90deg, #b4b4b4, #ffd08a,#b4b4b4);
+//     background: $primary-color;
+//     background: #fff;
+//     background-size: 400%;
+//     position: relative;
+//     margin: 8px auto;
+//     display: block;
+//     width: fit-content;
+//     transition: .3s;
+//     border: 2px solid #45475873;
+// }
+
+// // #cvDownloadButton:hover{
+// //     animation: downloadButtonAnimation 8s linear infinite;
+// //     transition: .3s;
+// // }
+
+// #cvDownloadButton:hover{
+//     background: #fff;
+//     // background: rgba(0,0,0,.4);
+// }
+
+// #cvDownloadButton:hover:after{
+//     content: ' ';
+//     animation: downloadButtonAnimation 8s linear infinite;
+//     transition: .3s;
+//     background: linear-gradient(90deg, #fff, $primary-color,#fff);
+//     background-size: 400%;
+//     position: relative;
+//     animation: downloadButtonAnimation 8s linear infinite;
+//     transition: .3s;
+//     position: absolute;
+//     top: -2px;
+//     left: -2px;
+//     bottom: -2px;
+//     right: -2px;
+//     z-index: -1;
+//     border-radius: 13px;
+// }
+
+
+// @keyframes downloadButtonAnimation{
+//     0%{
+//         background-position: 0%;
+//     }
+
+//     100%{
+//         background-position: 400%;
+//     }
+// }
+
+// .videoWrapper {
+//     position: relative;
+//     max-width: 640px;
+//     margin: 1rem auto;
+//     width: 100%;
+//     max-width: 640px;
+//     min-height: 360px;
+// }
+
+// .videoWrapper iframe {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+// }
+
+// .text--bold{
+//     font-weight: bold;
+// }
+
+// .education__block{
+//   display: grid;
+//   grid-template-columns: 80% 20%;
+
+//   > p {
+//     font-size: 18px;
+
+//     &:nth-child(1){
+//       font-weight: bold;
+//     }
+//     &:nth-child(2){
+//       text-align: right;
+//     }
+//   }
+// }
+
+// .carousel--generic{
+//   max-width: 900px;
+//   margin: 0 auto;
+// }
+
+//////// OVERRIDE ////////
+
+/// NEW STYLE
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.mainContainer{
+:root {
+  // --background: #060608;
+  background-color: #0c0c0e;
+
+  --color: #FAFAFA;
+}
+
+html, body {
   width: 100%;
-  margin-left: 30%;
+  height: 100%;
+  font-family: Arial;
 }
 
-.section__item{
-    margin: 24px 0;
-    padding: 24px;
-
-    &:first-child{
-        margin-top: 0;
-    }
-
-    &:last-child{
-        margin-bottom: 0;
-    }
+body {
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  background: var(--background);
 }
 
-#whoami{
-  // background-image:url("../assets/images/bg.jpg");
-  // background-size: 100vw;
-}
-
-#whoami > .section__wrapper{
-  background-color: #ffffffaf;
-  padding: 64px;
-  box-shadow: 0px 0px 1px #b7b7b7, 0px 0px 12px #b7b7b7;
-  text-align: center;
+.presentation__wrapper{
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
 
-#whoami h1{
-  font-weight: bold;
-  margin-bottom: 20px;
+.presentation {
+  color: var(--color);
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
 }
 
-#whoami h6{
-  margin: 0;
-  font-weight: bold;
-}
-
-.bioWrapper{
-  width: 55%;
-  margin: 16px auto;
-  max-width: 300px;
-}
-
-.bio{
-  display: grid;
-  grid-template-columns: 35% 65%;
-  margin: 0 auto;
-  text-align: left;
-}
-
-.bio > p:nth-child(odd){
-  font-weight: bold;
-}
-
-.bio > p:nth-child(even){
+.right {
   text-align: right;
-}
-
-.profilePicture{
-    height: 240px;
-    margin: auto;
-    display: block;
-    clip-path: circle(90px at center);
-}
-
-// #education{
-//     background-color: #00bfa5;
-// }
-
-// #fun{
-//     background-color: #E91E63;
-// }
-
-// #portfolio{
-//     background-color: #ffb74d;
-// }
-
-#cvDownloadButton{
-    color: $light-color;
-    padding: 16px 24px;
-    border-radius: 12px;
-    border-color: $light-color;
-    text-decoration: none;
-    font-weight: bold;
-    opacity: 1;
-    font-size: 18px;
-    margin: 24px auto 0 auto;
-    // background: linear-gradient(90deg, #b4b4b4, #ffd08a,#b4b4b4);
-    background: $primary-color;
-    background: #fff;
-    background-size: 400%;
-    position: relative;
-    margin: 8px auto;
-    display: block;
-    width: fit-content;
-    transition: .3s;
-    border: 2px solid #45475873;
-}
-
-// #cvDownloadButton:hover{
-//     animation: downloadButtonAnimation 8s linear infinite;
-//     transition: .3s;
-// }
-
-#cvDownloadButton:hover{
-    background: #fff;
-    // background: rgba(0,0,0,.4);
-}
-
-#cvDownloadButton:hover:after{
-    content: ' ';
-    animation: downloadButtonAnimation 8s linear infinite;
-    transition: .3s;
-    background: linear-gradient(90deg, #fff, $primary-color,#fff);
-    background-size: 400%;
-    position: relative;
-    animation: downloadButtonAnimation 8s linear infinite;
-    transition: .3s;
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    bottom: -2px;
-    right: -2px;
-    z-index: -1;
-    border-radius: 13px;
-}
-
-
-@keyframes downloadButtonAnimation{
-    0%{
-        background-position: 0%;
-    }
-
-    100%{
-        background-position: 400%;
-    }
-}
-
-.videoWrapper {
-    position: relative;
-    max-width: 640px;
-    margin: 1rem auto;
-    width: 100%;
-    max-width: 640px;
-    min-height: 360px;
-}
-
-.videoWrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
 }
 
-.text--bold{
-    font-weight: bold;
-}
-
-.education__block{
+.stack {
   display: grid;
-  grid-template-columns: 80% 20%;
+  grid-template-columns: 1fr;
+}
 
-  > p {
-    font-size: 18px;
+.stack span {
+  font-weight: bold;
+  grid-row-start: 1;
+  grid-column-start: 1;
+  font-size: 4rem;
+  --stack-height: calc(100% / var(--stacks) - 1px);
+  --inverse-index: calc(calc(var(--stacks) - 1) - var(--index));
+  --clip-top: calc(var(--stack-height) * var(--index));
+  --clip-bottom: calc(var(--stack-height) * var(--inverse-index));
+  clip-path: inset(var(--clip-top) 0 var(--clip-bottom) 0);
+  animation: stack 340ms cubic-bezier(.46,.29,0,1.24) 1 backwards calc(var(--index) * 120ms), glitch 2s ease infinite 2s alternate-reverse;
+}
 
-    &:nth-child(1){
-      font-weight: bold;
-    }
-    &:nth-child(2){
-      text-align: right;
-    }
+.stack span:nth-child(odd) { --glitch-translate: 8px; }
+.stack span:nth-child(even) { --glitch-translate: -8px; }
+
+@keyframes stack {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%);
+    text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+  };
+  60% {
+    opacity: 0.5;
+    transform: translateX(50%);
+  }
+  80% {
+    transform: none;
+    opacity: 1;
+    text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+  }
+  100% {
+    text-shadow: none;
   }
 }
 
-.carousel--generic{
-  max-width: 900px;
-  margin: 0 auto;
+@keyframes glitch {
+  0% {
+    text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+    transform: translate(var(--glitch-translate));
+  }
+  2% {
+    text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+  }
+  4%, 100% {  text-shadow: none; transform: none; }
 }
 
-//////// OVERRIDE ////////
+.links{
+  display: flex;
+  justify-content: center;
+}
+
+.links > a{
+  fill: white;
+  margin: 32px 24px;
+
+  // transition-duration: 1s;
+  // transition: fill .4s ease;
+
+  // &:hover{
+  //   fill: red;
+  // }
+}
+
+//GLITCH LINK
+
+
+.glitchLink:hover{
+  // width: 4em;
+  // height: 4em;
+  // transform: translate(4.5em,3em);
+  animation: glitch-middle 3s infinite;
+}
+
+@keyframes glitch-middle {
+  0%,26%,30%,72%,76%,100% { transform: translate(4.5em,3em) skew(0deg) ; box-shadow: none }
+  30%,70% {transform: translate(4.5em,3em) skew(30deg);}
+  29%,31%,69%,71% {transform: translate(4.5em,3em) skew(0deg);}
+  28%,74% { box-shadow: 
+    -0.2em 0.1em 0 0 cyan,
+    0.2em -0.1em 0 0 magenta
+  }
+}
+.glitchLink > svg:after,
+.glitchLink > svg:before {
+  display: block;
+  content: "";
+  background: #444;
+  width: 4em;
+}
+.glitchLink >svg:after {
+  height: 1.4em;
+  animation: glitch-middle-after 3s infinite;
+}
+
+@keyframes glitch-middle-after {
+  0%,34%,38%,46%,50%,100% { transform: translate(0,1em); box-shadow: none; }
+  36%,48% { transform: translate(0.4em,0em);
+  box-shadow: 
+    -1em 0 0 0 cyan,
+    1em 0 0 0 magenta,
+    0.5em 1em 0 -0.8em cyan
+  }
+}
+
+.glitchLink >svg:before {
+  height: 1em;
+  transform: translate(0em,3em);
+  animation: glitch-middle-before 3s infinite;
+}
+
+@keyframes glitch-middle-before {
+  0%,30%,34%,50%,54%,100% { transform: translate(0,0); box-shadow: none; }
+  32%,52% { transform: translate(-0.4em,1em);
+  box-shadow: 
+    -0.3em 0 0 0 red,
+    0.3em 0 0 0 yellow}
+}
+
+//GLITCH LINK
