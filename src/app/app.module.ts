@@ -14,6 +14,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PresentationComponent } from './components/presentation/presentation.component';
+import { ContentComponent } from './components/content/content.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PresentationComponent } from './components/presentation/presentation.co
     ProductsCarouselComponent,
     HeaderComponent,
     FooterComponent,
-    PresentationComponent
+    PresentationComponent,
+    ContentComponent
   ],
   imports: [
     BrowserModule,

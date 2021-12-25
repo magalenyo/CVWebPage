@@ -1,0 +1,70 @@
+.body__separator{
+    height: 2px;
+    width: 30%;
+    background-color: #343434;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.content__body {
+    width: 80%;
+    margin: 64px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.content__section {
+    margin: 24px 0 12px 0;
+}
+
+$primaryColor: #fff;
+$secondaryColor: #0c0c0e;
+$steps: 20;
+
+.content__title {
+    text-align: left;
+    position: relative;
+    margin: 0 auto;
+    color: $primaryColor;
+    font-size: 80px;
+    font-weight: 600;
+}
+
+.content__title__glitch {
+
+    letter-spacing: 0.01em;
+    transform: scale3d(1,1,1);
+
+    &::before,
+    &::after {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+        background: $secondaryColor;
+        color: $primaryColor;
+        clip: rect(0, 900px, 0, 0);
+    }
+
+    &::before {
+        left: 7px;
+        text-shadow: 1px 0 green;
+        animation: glitch-effect 8s infinite linear alternate-reverse;
+    }
+
+    &::after {
+        left: 3px;
+        text-shadow: -1px 0 red;
+        animation: glitch-effect 6s infinite linear alternate-reverse;
+    }
+}
+ 
+@keyframes glitch-effect{
+    @for $i from 0 through $steps{
+        #{percentage($i*(1/$steps))}{
+            clip:rect(random(100)+px,9999px,random(100)+px,0);
+        }
+    }   
+}
