@@ -28,12 +28,12 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css", 
-              "src/assets/scss/variables.scss",
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/styles/_variables.scss"
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
-                "./src/assets/scss" 
+                "src/styles" 
               ]
             },
             "scripts": [
@@ -109,8 +109,8 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/assets/scss/variables.scss",
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/styles/_variables.scss"
             ],
             "scripts": [
               "./node_modules/jquery/dist/jquery.slim.min.js",

@@ -1,18 +1,14 @@
-// Font Awesome
+/* FONT AWESOME */
 @import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
 @import "~@fortawesome/fontawesome-free/scss/solid.scss";
 @import "~@fortawesome/fontawesome-free/scss/regular.scss";
 @import "~@fortawesome/fontawesome-free/scss/brands.scss";
 
-// MDB SCSS
+/* MDB CSS */
 @import "~mdb-angular-ui-kit/assets/scss/mdb.scss";
 
 /* VARIABLES */
-//@import "~/assets/scss/variables.scss";
-@import "variables";
-
-/* Importing Bootstrap SCSS file. */
-// @import '~bootstrap/scss/bootstrap';
+@import "styles/_variables.scss";
 
 /* END VARIABLES */
 
