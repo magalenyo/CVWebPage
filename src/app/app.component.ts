@@ -1,5 +1,4 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import { faCalendarAlt, faEnvelope, faMapMarkerAlt, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -10,8 +9,5 @@ import { faCalendarAlt, faEnvelope, faMapMarkerAlt, faPhoneAlt } from '@fortawes
 })
 export class AppComponent {
   title = 'Miguel Ángel Bueno Rivera';
-  faCalendar = faCalendarAlt;
-  faMap = faMapMarkerAlt;
-  faMail = faEnvelope;
-  faPhone = faPhoneAlt;
+
 }

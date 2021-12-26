@@ -195,3 +195,24 @@
         clip: rect(50px, 24px, 41px, 0);
     }
 }
+
+
+.chromatic__aberration{
+	$color:rgb(255,0,0);
+	display:block;
+	position:relative;
+	color: $color;
+	mix-blend-mode: screen;
+	filter: url(#blurX);
+	&:after{
+		$color:rgb(0,255,255);
+		content: attr(textcontent);
+		display:block;
+		position: absolute;
+		left:0;
+		top:0;
+		transform:scaleX(1.008);
+		color: $color;
+		mix-blend-mode: screen;
+	}
+}
