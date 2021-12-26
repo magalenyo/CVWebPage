@@ -54,12 +54,18 @@ $starting-steps: 8;
     &::before {
         left: 7px;
         text-shadow: 1px 0 green;
+        counter-reset: randomsadfDelay var(--randomDelay);
+        animation-delay: counter(randomDelay);
+        // animation-delay: var(--randomDelay);
         animation: glitch-effect 8s infinite linear alternate-reverse;
     }
 
     &::after {
         left: 3px;
         text-shadow: -1px 0 red;
+        // counter-reset: randomDelay var(--randomDelay);
+        // animation-delay: counter(randomDelay)+'s';
+        animation-delay: var(--randomDelay);
         animation: glitch-effect 6s infinite linear alternate-reverse;
     }
 }
