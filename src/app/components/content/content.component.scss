@@ -11,7 +11,7 @@
     margin: 64px auto;
     display: flex;
     flex-direction: column;
-    color: $primary-white;
+    color: var(--primary-white);
 }
 
 .content__section {
@@ -25,7 +25,7 @@ $steps: 20;
     text-align: left;
     position: relative;
     margin: 0 auto;
-    color: $primary-white;
+    color: var(--primary-white);
     font-size: 80px;
     font-weight: 600;
 }
@@ -44,7 +44,7 @@ $steps: 20;
         right: 0;
         overflow: hidden;
         background: $secondaryColor;
-        color: $primary-white;
+        color: var(--primary-white);
         clip: rect(0, 900px, 0, 0);
     }
 
