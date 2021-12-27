@@ -38,6 +38,8 @@ $starting-steps: 8;
     letter-spacing: 0.01em;
     transform: scale3d(1,1,1);
 
+    animation-delay: var(--randomDelay);
+
     &::before,
     &::after {
         content: attr(data-text);
@@ -54,19 +56,13 @@ $starting-steps: 8;
     &::before {
         left: 7px;
         text-shadow: 1px 0 green;
-        counter-reset: randomsadfDelay var(--randomDelay);
-        animation-delay: counter(randomDelay);
-        // animation-delay: var(--randomDelay);
-        animation: glitch-effect 8s infinite linear alternate-reverse;
+        animation: glitch-effect 8s infinite var(--randomDelay) linear alternate-reverse;
     }
 
     &::after {
         left: 3px;
         text-shadow: -1px 0 red;
-        // counter-reset: randomDelay var(--randomDelay);
-        // animation-delay: counter(randomDelay)+'s';
-        animation-delay: var(--randomDelay);
-        animation: glitch-effect 6s infinite linear alternate-reverse;
+        animation: glitch-effect 6s infinite var(--randomDelay) linear alternate-reverse;
     }
 }
  

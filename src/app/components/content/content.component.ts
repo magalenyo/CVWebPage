@@ -35,13 +35,6 @@ export class ContentComponent implements OnInit {
       elements.forEach(element => {
         var randomDuration = Math.random() * this.glitchMaxDelay;
         element.style.setProperty('--randomDelay', randomDuration+'s');
-        element.style.setProperty('--x', 2+'s');
-        // window.getComputedStyle(element, ':after').setProperty('animation-delay', randomDuration+'s');
-        // window.getComputedStyle(element, ':before').animationDelay = randomDuration+'s';
-
-        // element.style.animationDelay = randomDuration + 's';  
-
-        // https://stackoverflow.com/questions/40164169/css-variables-custom-properties-in-pseudo-element-content-property
       });
     }
     
