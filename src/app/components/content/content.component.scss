@@ -34,11 +34,8 @@ $starting-steps: 8;
 }
 
 .content__title__glitch {
-
     letter-spacing: 0.01em;
     transform: scale3d(1,1,1);
-
-    animation-delay: var(--randomDelay);
 
     &::before,
     &::after {

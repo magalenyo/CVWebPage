@@ -43,6 +43,29 @@
     --glitch-translate: -8px;
 }
 
+.chromatic__aberration{
+	// $color:rgb(255,0,0);
+	// display:block;
+	// position:relative;
+	// color: $color;
+	mix-blend-mode: screen;
+	// filter: url(#blurX);
+	&:after{
+		// $color:rgb(0,255,255);
+		content: attr(textcontent);
+		display:block;
+		position: absolute;
+		left:0;
+		top:0;
+		// transform:scaleX(1.008);
+		// color: $color;
+		mix-blend-mode: screen;
+        animation: anim__presentation__glitch__ca 2s ease infinite 2s alternate-reverse;
+	}
+
+    animation: anim__presentation__glitch__ca 2s ease infinite 2s alternate-reverse;
+}
+
 @keyframes anim__presentation__stack {
     0% {
         opacity: 0;
@@ -77,6 +100,22 @@
         transform: none;
     }
 }
+
+@keyframes anim__presentation__glitch__ca {
+    0% {
+        $color:rgb(255,0,0);
+        filter: url(#blurX);
+    }
+    2% {
+        filter: url(#blurX);
+    }
+    4%,
+    100% {
+        filter: none;
+        display: none;
+    }
+}
+
 
 .links {
     display: flex;
@@ -194,25 +233,4 @@
     100% {
         clip: rect(50px, 24px, 41px, 0);
     }
-}
-
-
-.chromatic__aberration{
-	$color:rgb(255,0,0);
-	display:block;
-	position:relative;
-	color: $color;
-	mix-blend-mode: screen;
-	filter: url(#blurX);
-	&:after{
-		$color:rgb(0,255,255);
-		content: attr(textcontent);
-		display:block;
-		position: absolute;
-		left:0;
-		top:0;
-		transform:scaleX(1.008);
-		color: $color;
-		mix-blend-mode: screen;
-	}
 }
