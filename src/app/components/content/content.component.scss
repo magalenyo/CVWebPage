@@ -138,12 +138,107 @@ $starting-steps-text: 0;
 
 .bio__image__wrapper{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    margin-right: 42px;
 }
 
 .bioGrid{
     display: grid;
-    grid-template-columns: 35% 65%;
+    grid-template-columns: auto auto;
     margin: 0 auto;
     text-align: left;
+}
+
+.content__bio__wrapper{
+    display: flex;
+}
+
+.content__button{
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
+    transition-duration: .3s;
+    color: var(--primary-white);
+    border-radius: 6px;
+    border: 1px solid var(--primary-white);
+
+    margin: 18px auto;
+
+    &:hover{
+        color: var(--background-color);
+        background-color: var(--primary-white);
+        box-shadow: 0 0 12px 0 var(--primary-white);
+    }
+}
+
+.content__button__glitch{
+    letter-spacing: 0.01em;
+    transform: scale3d(1,1,1);
+
+    &::before,
+    &::after {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+        background: $secondaryColor;
+        color: var(--primary-white);
+        clip: rect(0, 900px, 0, 0);
+
+        // clip:rect(random(100)+px,9999px,random(100)+px,-20px);
+    }
+
+    &::before {
+        left: 7px;
+        text-shadow: 1px 0 green;
+        animation: glitch-effect-button 8s infinite 2s linear alternate-reverse;
+
+        // &::hover{
+        //     animation-play-state: paused;
+        //     background: var(--primary-white);
+        // }
+    }
+
+    &::after {
+        left: 3px;
+        text-shadow: -1px 0 red;
+        animation: glitch-effect-button 6s infinite 2s linear alternate-reverse;
+
+        // &::hover{
+        //     animation-play-state: paused;
+        //     background: var(--primary-white);
+        // }
+    }
+
+    // &:hover,
+    // &::before:hover,
+    // &::after:hover{
+    //     animation: none;
+    //     background: var(--primary-white);
+    // }
+
+    &:hover::before,
+    &:hover::after{
+        animation: none;
+        // background: var(--primary-white);
+    }
+}
+
+@keyframes glitch-effect-button{
+    @for $i from 0 through $starting-steps-text{
+        #{percentage($i*(1/$steps))}{
+            clip: rect(0, 900px, 0, 0);
+        }
+    }  
+
+    @for $i from $starting-steps-text through $steps{
+        #{percentage($i*(1/$steps))}{
+            clip:rect((random(100)-20)+px,9999px,(random(100)-20)+px,-20px);
+        }
+    }   
 }
