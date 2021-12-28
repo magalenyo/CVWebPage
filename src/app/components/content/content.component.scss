@@ -22,6 +22,7 @@
 $secondaryColor: #0c0c0e;
 $steps: 28;
 $starting-steps: 8;
+$starting-steps-text: 0;
 
 .content__title {
     text-align: left;
@@ -34,36 +35,6 @@ $starting-steps: 8;
 }
 
 .content__title__glitch {
-    letter-spacing: 0.01em;
-    transform: scale3d(1,1,1);
-
-    &::before,
-    &::after {
-        content: attr(data-text);
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        overflow: hidden;
-        background: $secondaryColor;
-        color: var(--primary-white);
-        clip: rect(0, 900px, 0, 0);
-    }
-
-    &::before {
-        left: 7px;
-        text-shadow: 1px 0 green;
-        animation: glitch-effect 8s infinite var(--randomDelay) linear alternate-reverse;
-    }
-
-    &::after {
-        left: 3px;
-        text-shadow: -1px 0 red;
-        animation: glitch-effect 6s infinite var(--randomDelay) linear alternate-reverse;
-    }
-}
-
-.content__text__glitch {
     letter-spacing: 0.01em;
     transform: scale3d(1,1,1);
 
@@ -106,6 +77,52 @@ $starting-steps: 8;
         }
     }   
 }
+
+
+.content__text__glitch {
+    letter-spacing: 0.01em;
+    transform: scale3d(1,1,1);
+
+    &::before,
+    &::after {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+        background: $secondaryColor;
+        color: var(--primary-white);
+        clip: rect(0, 900px, 0, 0);
+    }
+
+    &::before {
+        left: 7px;
+        text-shadow: 1px 0 green;
+        animation: glitch-effect-text 8s infinite var(--randomDelay) linear alternate-reverse;
+    }
+
+    &::after {
+        left: 3px;
+        text-shadow: -1px 0 red;
+        animation: glitch-effect-text 6s infinite var(--randomDelay) linear alternate-reverse;
+    }
+}
+
+@keyframes glitch-effect-text{
+    @for $i from 0 through $starting-steps-text{
+        #{percentage($i*(1/$steps))}{
+            clip: rect(0, 900px, 0, 0);
+        }
+    }  
+
+    @for $i from $starting-steps-text through $steps{
+        #{percentage($i*(1/$steps))}{
+            clip:rect(random(100)+px,9999px,random(100)+px,0);
+        }
+    }   
+}
+
 
 .content__text{
     font-size: 20px;
