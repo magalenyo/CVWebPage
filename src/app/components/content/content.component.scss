@@ -16,7 +16,7 @@
 }
 
 .content__section {
-    margin: 24px 0 12px 0;
+    margin: 24px 0 80px 0;
 }
 
 $secondaryColor: #0c0c0e;
@@ -130,7 +130,7 @@ $starting-steps-text: 0;
 
 .profilePicture{
     height: 240px;
-    margin: auto;
+    margin: 12px auto;
     display: block;
     -webkit-clip-path: circle(90px at center);
     clip-path: circle(90px at center);
@@ -142,11 +142,24 @@ $starting-steps-text: 0;
     margin-right: 42px;
 }
 
+.bio__text__wrapper{
+    margin-top: 24px;
+}
+
 .bioGrid{
     display: grid;
     grid-template-columns: auto auto;
     margin: 0 auto;
     text-align: left;
+}
+
+.bioGrid > p:nth-child(odd) {
+    margin-right: 8px;
+}
+
+.bioGrid a {
+    color: var(--primary-white);
+    text-decoration: underline;
 }
 
 .content__bio__wrapper{
@@ -165,14 +178,22 @@ $starting-steps-text: 0;
     border-radius: 6px;
     border: 1px solid var(--primary-white);
 
-    margin: 18px auto;
+    margin: 34px auto 12px auto;
 
     &:hover{
         color: var(--background-color);
         background-color: var(--primary-white);
         box-shadow: 0 0 12px 0 var(--primary-white);
+        font-weight: bold;
     }
 }
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
 
 .content__button__glitch{
     letter-spacing: 0.01em;
@@ -189,43 +210,23 @@ $starting-steps-text: 0;
         background: $secondaryColor;
         color: var(--primary-white);
         clip: rect(0, 900px, 0, 0);
-
-        // clip:rect(random(100)+px,9999px,random(100)+px,-20px);
     }
 
     &::before {
         left: 7px;
         text-shadow: 1px 0 green;
         animation: glitch-effect-button 8s infinite 2s linear alternate-reverse;
-
-        // &::hover{
-        //     animation-play-state: paused;
-        //     background: var(--primary-white);
-        // }
     }
 
     &::after {
         left: 3px;
         text-shadow: -1px 0 red;
         animation: glitch-effect-button 6s infinite 2s linear alternate-reverse;
-
-        // &::hover{
-        //     animation-play-state: paused;
-        //     background: var(--primary-white);
-        // }
     }
-
-    // &:hover,
-    // &::before:hover,
-    // &::after:hover{
-    //     animation: none;
-    //     background: var(--primary-white);
-    // }
 
     &:hover::before,
     &:hover::after{
         animation: none;
-        // background: var(--primary-white);
     }
 }
 
@@ -238,7 +239,7 @@ $starting-steps-text: 0;
 
     @for $i from $starting-steps-text through $steps{
         #{percentage($i*(1/$steps))}{
-            clip:rect((random(100)-20)+px,9999px,(random(100)-20)+px,-20px);
+            clip:rect((random(100)-20)+px,9999px,(random(70)-20)+px,-20px);
         }
     }   
 }
