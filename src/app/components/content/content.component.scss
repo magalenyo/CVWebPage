@@ -243,3 +243,55 @@ $starting-steps-text: 0;
         }
     }   
 }
+
+.content__carousel{
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.videoWrapper {
+    position: relative;
+    max-width: 640px;
+    margin: 40px auto;
+    width: 100%;
+    max-width: 1200px;
+    height: 675px;
+}
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+/*************************************************************************************/
+/************************************MEDIA QUERIES************************************/
+/*************************************************************************************/
+
+
+/* Using SCSS variables to store breakpoints */
+
+$breakpoint-tablet: 768px;
+
+
+@media screen and (max-width: 768px) {
+
+    .content__text{
+        text-align: justify;
+    }
+
+    .content__bio__wrapper{
+        flex-direction: column;
+    }
+
+    .bio__image__wrapper{
+        margin: auto;
+    }
+    
+    .videoWrapper{
+        height: 345px;
+    }
+}

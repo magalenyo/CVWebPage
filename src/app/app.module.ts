@@ -12,6 +12,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PresentationComponent } from './components/presentation/presentation.component';
 import { ContentComponent } from './components/content/content.component';
+import { CarouselBoundeadComponent } from './components/carousel-boundead/carousel-boundead.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ContentComponent } from './components/content/content.component';
     HeaderComponent,
     FooterComponent,
     PresentationComponent,
-    ContentComponent
+    ContentComponent,
+    CarouselBoundeadComponent
   ],
   imports: [
     BrowserModule,
