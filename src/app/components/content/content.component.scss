@@ -285,7 +285,11 @@ $starting-steps-text: 0;
 $breakpoint-tablet: 768px;
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $breakpoint-tablet) {
+
+    .content__section{
+        margin-bottom: 20px;
+    }
 
     .content__text,
     .content__list *{
