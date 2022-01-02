@@ -128,6 +128,14 @@ $starting-steps-text: 0;
     font-size: 20px;
 }
 
+.content__list *{
+    font-size: 18px;
+}
+
+.content__list > li{
+    font-weight: bold;
+}
+
 .profilePicture{
     height: 240px;
     margin: 12px auto;
@@ -279,8 +287,10 @@ $breakpoint-tablet: 768px;
 
 @media screen and (max-width: 768px) {
 
-    .content__text{
+    .content__text,
+    .content__list *{
         text-align: justify;
+        font-size: 16px;
     }
 
     .content__bio__wrapper{
