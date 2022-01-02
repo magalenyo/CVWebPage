@@ -2,6 +2,8 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    width: 80%;
+    margin: auto;
 }
 
 .presentation {
@@ -12,7 +14,7 @@
     margin: auto;
 }
 
-.right {
+.presentation__right {
     text-align: right;
     width: 100%;
 }
@@ -234,4 +236,50 @@
     100% {
         clip: rect(50px, 24px, 41px, 0);
     }
+}
+
+
+/*************************************************************************************/
+/************************************MEDIA QUERIES************************************/
+/*************************************************************************************/
+
+
+/* Using SCSS variables to store breakpoints */
+
+$breakpoint-tablet: 892px;
+$breakpoint-tablet-xs: 644px;
+$breakpoint-phone: 452px;
+
+@media screen and (max-width: $breakpoint-tablet) {
+
+    .presentation__stack span {
+        font-size: 3rem;
+    }
+
+}
+
+@media screen and (max-width: $breakpoint-tablet-xs) {
+
+    .presentation__stack span {
+        font-size: 2rem;
+    }
+
+    .presentation__left,
+    .presentation__right{
+        font-size: 18px;
+    }
+
+}
+
+@media screen and (max-width: $breakpoint-phone) {
+
+    .presentation__stack span {
+        font-size: 1.5rem;
+    }
+
+    .presentation__left,
+    .presentation__right{
+        font-size: 15px;
+    }
+
 }
