@@ -16,7 +16,7 @@
 }
 
 .content__section {
-    margin: 24px 0 80px 0;
+    margin: 24px 0 50px 0;
 }
 
 $secondaryColor: #0c0c0e;
@@ -126,6 +126,15 @@ $starting-steps-text: 0;
 
 .content__text{
     font-size: 20px;
+}
+
+.content__wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.stepper__wrapper{
+    margin: 12px 0;
 }
 
 .content__list *{
@@ -279,11 +288,7 @@ $starting-steps-text: 0;
 /************************************MEDIA QUERIES************************************/
 /*************************************************************************************/
 
-
-/* Using SCSS variables to store breakpoints */
-
 $breakpoint-tablet: 768px;
-
 
 @media screen and (max-width: $breakpoint-tablet) {
 

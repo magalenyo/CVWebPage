@@ -13,6 +13,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { PresentationComponent } from './components/presentation/presentation.component';
 import { ContentComponent } from './components/content/content.component';
 import { CarouselBoundeadComponent } from './components/carousel-boundead/carousel-boundead.component';
+import { StepperEducationComponent } from './components/stepper-education/stepper-education.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { CarouselBoundeadComponent } from './components/carousel-boundead/carous
     FooterComponent,
     PresentationComponent,
     ContentComponent,
-    CarouselBoundeadComponent
+    CarouselBoundeadComponent,
+    StepperEducationComponent
   ],
   imports: [
     BrowserModule,
