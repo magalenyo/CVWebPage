@@ -12,6 +12,7 @@ export class CarouselBoundeadComponent implements OnInit {
 
   modal;
   modalImg;
+  zoomedIn = false;
 
   constructor() { }
 
@@ -43,6 +44,31 @@ export class CarouselBoundeadComponent implements OnInit {
           this.closeModal();
       } 
     });
+
+
+    this.modalImg.addEventListener('click', (e) => {
+      this.zoomedIn = !this.zoomedIn;
+        if (this.zoomedIn) {
+          this.modalImg.classList.add('zoomed__in');
+
+          this.modalImg.addEventListener('mousemove', function(e) {
+            $(this)
+              .css({
+                'transform-origin':
+                  ((e.pageX - $(this).offset().left) / $(this).width()) * 100 +
+                  '% ' +
+                  ((e.pageY - $(this).offset().top) / $(this).height()) * 100 +
+                  '%'
+              });
+            });
+        }
+        else{
+          this.modalImg.removeEventListener('mousemove', this.modalImg.click);
+          this.modalImg.classList.remove('zoomed__in');
+        }
+    })
+
+    
   }
 
   openModal() {
@@ -55,6 +81,9 @@ export class CarouselBoundeadComponent implements OnInit {
     this.modal.style.display = "none";
 
     document.body.style.overflow = 'scroll';
+
+    this.zoomedIn = false;
+    this.modalImg.classList.remove('zoomed__in');
   }
 
 }
