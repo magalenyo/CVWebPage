@@ -21,8 +21,8 @@ export class CarouselBoundeadComponent implements OnInit {
   
   ngAfterViewInit() : void {
 
-    this.modal = document.getElementById("carousel-modal");
-    this.modalImg = document.getElementById("img01");
+    this.modal = document.getElementById("carousel-modal-div");
+    this.modalImg = document.getElementById("carousel-modal-img");
 
     $(this.defaultClass).on('click', (e) => {
         const thisObject = e.currentTarget;
@@ -33,14 +33,14 @@ export class CarouselBoundeadComponent implements OnInit {
       });
 
 
-    const span : HTMLElement = document.getElementsByClassName("close")[0] as HTMLElement;
+    const span : HTMLElement = document.getElementsByClassName("carousel-modal-close")[0] as HTMLElement;
 
     span.onclick = () => { 
       this.closeModal();
     }
 
     $('html').click((e) => {
-      if($(e.target).hasClass('modal')) {
+      if($(e.target).hasClass('carousel-modal')) {
           this.closeModal();
       } 
     });
