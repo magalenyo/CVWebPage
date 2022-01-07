@@ -1,7 +1,11 @@
+.slider__img{
+  transition-duration: 0.3s;
+
+}
+
 .slider__img:hover {
   cursor: pointer;
-  filter: opacity(80%);
-  transition-duration: 0.3s;
+  filter: opacity(70%);
   cursor: zoom-in;
 }
 
