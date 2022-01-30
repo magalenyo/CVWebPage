@@ -14,7 +14,7 @@ export class StepperEducationComponent extends StepperBaseComponent{
   }
 
   ngOnInit(): void {
-
+    super.ngOnInit();
   }
 
   ngAfterViewInit(): void {
