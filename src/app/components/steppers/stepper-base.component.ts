@@ -2,14 +2,14 @@ import { Component, ElementRef, OnInit } from '@angular/core';
 
 
 @Component({
-  selector: 'app-stepper-education',
-  templateUrl: './stepper-education.component.html',
-  styleUrls: ['./stepper-education.component.scss']
+  selector: 'app-stepper-base',
+  template: '',
+  styleUrls: ['./stepper-base.component.scss']
 })
-export class StepperEducationComponent implements OnInit {
+export class StepperBaseComponent implements OnInit {
   currentlyOpen;
 
-  constructor(private elem: ElementRef) { }
+  constructor(protected elem: ElementRef) { }
 
   ngOnInit(): void {
 
