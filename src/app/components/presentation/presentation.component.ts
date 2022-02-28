@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PresentationComponent implements OnInit {
 
+  useVideo = true;
+  videoPlaybackRate = .9;
+  videoId = '#presentationVideo';
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  ngAfterViewInit(): void {
+    if (this.useVideo) {
+      (<HTMLVideoElement> document.querySelector(this.videoId)).playbackRate = this.videoPlaybackRate;
+      // (<HTMLVideoElement> document.querySelector(this.videoId)).play();
+    }
   }
 
 }

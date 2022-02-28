@@ -6,6 +6,10 @@
     </defs>
 </svg>
 
+<div *ngIf="useVideo" class = "presentation__video__container">
+    <video id = "presentationVideo" class ="presentation__video" playsinline autoplay muted loop src="../../../assets/videos/InfiniteLoop.mp4"></video>
+</div>
+
 <div class="presentation__wrapper">
     <div class="presentation">
         <span class="presentation__left">Full Stack Developer</span>
