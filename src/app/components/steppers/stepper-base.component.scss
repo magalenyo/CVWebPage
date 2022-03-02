@@ -182,11 +182,12 @@ $breakpoint-tablet: 768px;
 
 @media screen and (max-width: $breakpoint-tablet) {
 
-    .step__header__title,
-    .step__header__subtitle,
     .stepper__text{
         text-align: justify;
-        // font-size: 16px;
+    }
+
+    .step__header__title {
+        font-size: 18px;
     }
 
 }

@@ -126,6 +126,7 @@ $starting-steps-text: 0;
 
 .content__text{
     font-size: 20px;
+    line-height: 26px;
 }
 
 .content__wrapper{
@@ -289,6 +290,8 @@ $starting-steps-text: 0;
 /*************************************************************************************/
 
 $breakpoint-tablet: 768px;
+$breakpoint-phone: 452px;
+
 
 @media screen and (max-width: $breakpoint-tablet) {
 
@@ -313,4 +316,13 @@ $breakpoint-tablet: 768px;
     .videoWrapper{
         height: 345px;
     }
+}
+
+
+@media screen and (max-width: $breakpoint-phone) {
+
+    .content__title {
+        font-size: 36px;
+    }
+
 }
