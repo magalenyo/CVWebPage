@@ -2,7 +2,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 85%;
     margin: auto;
 }
 
@@ -317,6 +317,8 @@
 $breakpoint-tablet: 892px;
 $breakpoint-tablet-xs: 644px;
 $breakpoint-phone: 452px;
+$breakpoint-phone-xs: 366px;
+
 
 @media screen and (max-width: $breakpoint-tablet) {
 
@@ -329,7 +331,7 @@ $breakpoint-phone: 452px;
 @media screen and (max-width: $breakpoint-tablet-xs) {
 
     .presentation__stack span {
-        font-size: 2rem;
+        font-size: 2.25rem;
     }
 
     .presentation__left,
@@ -342,12 +344,20 @@ $breakpoint-phone: 452px;
 @media screen and (max-width: $breakpoint-phone) {
 
     .presentation__stack span {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 
     .presentation__left,
     .presentation__right{
         font-size: 15px;
+    }
+
+}
+
+@media screen and (max-width: $breakpoint-phone-xs) {
+
+    .presentation__stack span {
+        font-size: 1.55rem;
     }
 
 }
