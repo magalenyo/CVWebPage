@@ -3,7 +3,7 @@
   "version": 1, 
   "newProjectRoot": "projects",
   "projects": {
-    "magalenyo.github.io": {
+    "CVWebPage": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/magalenyo.github.io",
+            "outputPath": "dist/CVWebPage",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -82,18 +82,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "magalenyo.github.io:build"
+            "browserTarget": "CVWebPage:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "magalenyo.github.io:build:production"
+              "browserTarget": "CVWebPage:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "magalenyo.github.io:build"
+            "browserTarget": "CVWebPage:build"
           }
         },
         "test": {
@@ -136,15 +136,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "magalenyo.github.io:serve"
+            "devServerTarget": "CVWebPage:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "magalenyo.github.io:serve:production"
+              "devServerTarget": "CVWebPage:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "magalenyo.github.io"
+  "defaultProject": "CVWebPage"
 }
