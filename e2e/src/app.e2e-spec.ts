@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('CVWebPage app is running!');
+    expect(page.getTitleText()).toEqual('magalenyo.github.io app is running!');
   });
 
   afterEach(async () => {
