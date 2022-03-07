@@ -8,24 +8,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { PresentationComponent } from './components/presentation/presentation.component';
-import { ContentComponent } from './components/content/content.component';
-import { CarouselBoundeadComponent } from './components/carousel-boundead/carousel-boundead.component';
-import { StepperEducationComponent } from './components/steppers/stepper-education/stepper-education.component';
-import { StepperExperienceComponent } from './components/steppers/stepper-experience/stepper-experience.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    PresentationComponent,
-    ContentComponent,
-    CarouselBoundeadComponent,
-    StepperEducationComponent,
-    StepperExperienceComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
