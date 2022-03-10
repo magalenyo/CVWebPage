@@ -8,7 +8,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { HashLocationStrategy, LocationStrategy, PathLocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -21,7 +20,7 @@ import { HashLocationStrategy, LocationStrategy, PathLocationStrategy } from '@a
     FontAwesomeModule,
     MdbCarouselModule
   ],
-  providers: [{provide: LocationStrategy, useClass: PathLocationStrategy}],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
