@@ -28,12 +28,12 @@ jobs:
     - name: copy error file
       uses: canastro/copy-file-action@master
       with:
-        source: "docs/index.html"
-        target: "docs/404.html"
+        source: "dist/index.html"
+        target: "dist/404.html"
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages
-        FOLDER: docs/CVWebPage
+        FOLDER: dist/CVWebPage
         
