@@ -37,6 +37,6 @@ jobs:
     - name: Copy index to error file
       uses: canastro/copy-file-action@master
       with:
-        source: .docs/index.html
-        target: .docs/404.html
+        source: "docs/index.html"
+        target: "docs/404.html"
         
