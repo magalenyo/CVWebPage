@@ -25,6 +25,11 @@ jobs:
       run: |
         npm install
         npm run-script deploy
+    - name: Copy index to error file
+      uses: canastro/copy-file-action@master
+      with:
+        source: "docs/index.html"
+        target: "docs/404.html"
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
@@ -34,9 +39,3 @@ jobs:
     - name: List directories
       run: |
         ls
-    - name: Copy index to error file
-      uses: canastro/copy-file-action@master
-      with:
-        source: "docs/index.html"
-        target: "docs/404.html"
-        
