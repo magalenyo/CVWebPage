@@ -1,0 +1,328 @@
+.body__separator{
+    height: 2px;
+    width: 45%;
+    background-color: #343434;
+    margin: auto;
+    margin-top: 24px;
+    border-radius: 10px;
+}
+
+.content__body {
+    width: 80%;
+    margin: 64px auto;
+    display: flex;
+    flex-direction: column;
+    color: var(--primary-white);
+}
+
+.content__section {
+    margin: 24px 0 50px 0;
+}
+
+$secondaryColor: #0c0c0e;
+$steps: 28;
+$starting-steps: 8;
+$starting-steps-text: 0;
+
+.content__title {
+    text-align: left;
+    position: relative;
+    margin: 0 auto;
+    color: var(--primary-white);
+    font-size: 46px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.content__title__glitch {
+    letter-spacing: 0.01em;
+    transform: scale3d(1,1,1);
+
+    &::before,
+    &::after {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+        background: $secondaryColor;
+        color: var(--primary-white);
+        clip: rect(0, 900px, 0, 0);
+    }
+
+    &::before {
+        left: 7px;
+        text-shadow: 1px 0 green;
+        animation: glitch-effect 8s infinite var(--randomDelay) linear alternate-reverse;
+    }
+
+    &::after {
+        left: 3px;
+        text-shadow: -1px 0 red;
+        animation: glitch-effect 6s infinite var(--randomDelay) linear alternate-reverse;
+    }
+}
+ 
+@keyframes glitch-effect{
+    @for $i from 0 through $starting-steps{
+        #{percentage($i*(1/$steps))}{
+            clip: rect(0, 900px, 0, 0);
+        }
+    }  
+
+    @for $i from $starting-steps through $steps{
+        #{percentage($i*(1/$steps))}{
+            clip:rect(random(100)+px,9999px,random(100)+px,0);
+        }
+    }   
+}
+
+
+.content__text__glitch {
+    letter-spacing: 0.01em;
+    transform: scale3d(1,1,1);
+
+    &::before,
+    &::after {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+        background: $secondaryColor;
+        color: var(--primary-white);
+        clip: rect(0, 900px, 0, 0);
+    }
+
+    &::before {
+        left: 7px;
+        text-shadow: 1px 0 green;
+        animation: glitch-effect-text 8s infinite var(--randomDelay) linear alternate-reverse;
+    }
+
+    &::after {
+        left: 3px;
+        text-shadow: -1px 0 red;
+        animation: glitch-effect-text 6s infinite var(--randomDelay) linear alternate-reverse;
+    }
+}
+
+@keyframes glitch-effect-text{
+    @for $i from 0 through $starting-steps-text{
+        #{percentage($i*(1/$steps))}{
+            clip: rect(0, 900px, 0, 0);
+        }
+    }  
+
+    @for $i from $starting-steps-text through $steps{
+        #{percentage($i*(1/$steps))}{
+            clip:rect(random(100)+px,9999px,random(100)+px,0);
+        }
+    }   
+}
+
+
+.content__text{
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.content__wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.stepper__wrapper{
+    margin: 12px 0;
+}
+
+.content__list *{
+    font-size: 18px;
+}
+
+.content__list > li{
+    font-weight: bold;
+}
+
+.profilePicture{
+    height: 240px;
+    margin: 12px auto;
+    display: block;
+    -webkit-clip-path: circle(90px at center);
+    clip-path: circle(90px at center);
+}
+
+.bio__image__wrapper{
+    display: flex;
+    flex-direction: column;
+    margin-right: 42px;
+}
+
+.bio__text__wrapper{
+    margin-top: 24px;
+}
+
+.bioGrid{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.bioGrid > p:nth-child(odd) {
+    margin-right: 8px;
+}
+
+.bioGrid a {
+    color: var(--primary-white);
+    text-decoration: underline;
+}
+
+.content__bio__wrapper{
+    display: flex;
+}
+
+.content__button{
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
+    transition-duration: .3s;
+    color: var(--primary-white);
+    border-radius: 6px;
+    border: 1px solid var(--primary-white);
+
+    margin: 34px auto 12px auto;
+
+    &:hover{
+        color: var(--background-color);
+        background-color: var(--primary-white);
+        box-shadow: 0 0 12px 0 var(--primary-white);
+        font-weight: bold;
+    }
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+
+.content__button__glitch{
+    letter-spacing: 0.01em;
+    transform: scale3d(1,1,1);
+
+    &::before,
+    &::after {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+        background: $secondaryColor;
+        color: var(--primary-white);
+        clip: rect(0, 900px, 0, 0);
+    }
+
+    &::before {
+        left: 7px;
+        text-shadow: 1px 0 green;
+        animation: glitch-effect-button 8s infinite 2s linear alternate-reverse;
+    }
+
+    &::after {
+        left: 3px;
+        text-shadow: -1px 0 red;
+        animation: glitch-effect-button 6s infinite 2s linear alternate-reverse;
+    }
+
+    &:hover::before,
+    &:hover::after{
+        animation: none;
+    }
+}
+
+@keyframes glitch-effect-button{
+    @for $i from 0 through $starting-steps-text{
+        #{percentage($i*(1/$steps))}{
+            clip: rect(0, 900px, 0, 0);
+        }
+    }  
+
+    @for $i from $starting-steps-text through $steps{
+        #{percentage($i*(1/$steps))}{
+            clip:rect((random(100)-20)+px,9999px,(random(70)-20)+px,-20px);
+        }
+    }   
+}
+
+.content__carousel{
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.videoWrapper {
+    position: relative;
+    max-width: 640px;
+    margin: 40px auto;
+    width: 100%;
+    max-width: 1200px;
+    height: 675px;
+}
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+/*************************************************************************************/
+/************************************MEDIA QUERIES************************************/
+/*************************************************************************************/
+
+$breakpoint-tablet: 768px;
+$breakpoint-phone: 452px;
+
+
+@media screen and (max-width: $breakpoint-tablet) {
+
+    .content__section{
+        margin-bottom: 20px;
+    }
+
+    .content__text,
+    .content__list *{
+        text-align: justify;
+        font-size: 16px;
+    }
+
+    .content__bio__wrapper{
+        flex-direction: column;
+    }
+
+    .bio__image__wrapper{
+        margin: auto;
+    }
+    
+    .videoWrapper{
+        height: 345px;
+    }
+}
+
+
+@media screen and (max-width: $breakpoint-phone) {
+
+    .content__title {
+        font-size: 36px;
+    }
+
+}

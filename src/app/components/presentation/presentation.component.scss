@@ -1,0 +1,363 @@
+.presentation__wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    margin: auto;
+}
+
+.presentation {
+    color: var(--main-font-color);
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.presentation__video__container{
+    // overflow-x: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.presentation__video{
+    /* margin: auto; */
+    // position: absolute;
+    /* display: block; */
+    /* top: 0; */
+    /* left: 0; */
+    /* bottom: 0; */
+    /* right: 0; */
+    /* width: 100%; */
+    /* text-align: center; */
+    // height: 100%;
+    /* object-fit: cover; */
+    // overflow: hidden;
+    // margin-left: 50%;
+    transform: translateX(-50%);
+    /* overflow-x: hidden; */
+    opacity: .2;
+    z-index: -999;
+
+
+
+    // width: 100vw; 
+    // height: 56.25vw; /* height:width ratio = 9/16 = .5625  */
+    // background: pink;
+    // max-height: 100vh;
+    // max-width: 177.78vh; /* 16/9 = 1.778 */
+    // margin: auto;
+    // position: absolute;
+    // top:0;bottom:0; /* vertical center */
+    // left:0;right:0; /* horizontal center */
+
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.presentation__right {
+    text-align: right;
+    width: 100%;
+}
+
+.presentation__stack {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.presentation__stack span {
+    font-weight: bold;
+    grid-row-start: 1;
+    grid-column-start: 1;
+    font-size: 4rem;
+    --stack-height: calc(100% / var(--stacks) - 1px);
+    --inverse-index: calc(calc(var(--stacks) - 1) - var(--index));
+    --clip-top: calc(var(--stack-height) * var(--index));
+    --clip-bottom: calc(var(--stack-height) * var(--inverse-index));
+    clip-path: inset(var(--clip-top) 0 var(--clip-bottom) 0);
+    animation: anim__presentation__stack 340ms cubic-bezier(0.46, 0.29, 0, 1.24) 1 backwards calc(var(--index) * 120ms),
+    anim__presentation__glitch 2s ease infinite 2s alternate-reverse;
+}
+
+.presentation__stack span:nth-child(odd) {
+    --glitch-translate: 24px;
+}
+
+.presentation__stack span:nth-child(even) {
+    --glitch-translate: -24px;
+}
+
+.chromatic__aberration{
+	// $color:rgb(255,0,0);
+	// display:block;
+	// position:relative;
+	// color: $color;
+	mix-blend-mode: screen;
+	// filter: url(#blurX);
+	&:after{
+		// $color:rgb(0,255,255);
+		content: attr(textcontent);
+		display:block;
+		position: absolute;
+		left:0;
+		top:0;
+		// transform:scaleX(1.008);
+		// color: $color;
+		mix-blend-mode: screen;
+        animation: anim__presentation__glitch__ca 2s ease infinite 2s alternate-reverse;
+	}
+
+    animation: anim__presentation__glitch__ca 2s ease infinite 2s alternate-reverse;
+}
+
+@keyframes anim__presentation__stack {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%);
+        text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+    }
+    60% {
+        opacity: 0.5;
+        transform: translateX(50%);
+    }
+    80% {
+        transform: none;
+        opacity: 1;
+        text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+    }
+    100% {
+        text-shadow: none;
+    }
+}
+
+@keyframes anim__presentation__glitch {
+    0% {
+        text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+        transform: translate(var(--glitch-translate));
+    }
+    2% {
+        text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+    }
+    4%,
+    100% {
+        text-shadow: none;
+        transform: none;
+    }
+}
+
+@keyframes anim__presentation__glitch__ca {
+    0% {
+        $color:rgb(255,0,0);
+        filter: url(#blurX);
+    }
+    2% {
+        filter: url(#blurX);
+    }
+    4%,
+    100% {
+        filter: none;
+        display: none;
+    }
+}
+
+.links__wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+}
+
+.links > a {
+    fill: white;
+    margin: 32px 24px;
+
+    &:hover {
+        transition-duration: 1s;
+        fill: #c4c8ff;
+    }
+}
+
+//GLITCH FOOTER
+.footerImgRefrences {
+    display: none;
+}
+.scrollChevron{
+    font-size: 24px;
+}
+
+.scrollChevron i{
+    margin: 24px auto 32px auto;
+    text-align: center;
+    display: block;
+    color: var(--primary-white);
+}
+
+.links > a:hover > div {
+    .svgWrap__text:nth-child(2),
+    .svgWrap__text:nth-child(3) {
+        clip: rect(0, 0, 0, 0);
+    }
+    .svgWrap__text:nth-child(2) {
+        fill: #fffafa;
+        left: -2px;
+        animation: anim__svg__glitch 2s infinite linear alternate-reverse;
+    }
+    .svgWrap__text:nth-child(3) {
+        fill: #f5f5f5;
+        left: 2px;
+        animation: anim__svg__glitch 3s infinite linear alternate-reverse;
+    }
+}
+
+.svgWrap {
+    position: relative;
+    width: 24px;
+    height: 24px;
+}
+
+.svgWrap__text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    // background: #000;
+    background: transparent;
+    width: 24px;
+    height: 24px;
+}
+
+@keyframes anim__svg__glitch {
+    0% {
+        clip: rect(65px, 24px, 1px, 0);
+    }
+    5% {
+        clip: rect(14px, 24px, 37px, 0);
+    }
+    10% {
+        clip: rect(1px, 24px, 55px, 0);
+    }
+    15% {
+        clip: rect(47px, 24px, 74px, 0);
+    }
+    20% {
+        clip: rect(70px, 24px, 48px, 0);
+    }
+    25% {
+        clip: rect(8px, 24px, 58px, 0);
+    }
+    30% {
+        clip: rect(44px, 24px, 72px, 0);
+    }
+    35% {
+        clip: rect(17px, 24px, 68px, 0);
+    }
+    40% {
+        clip: rect(51px, 24px, 32px, 0);
+    }
+    45% {
+        clip: rect(56px, 24px, 71px, 0);
+    }
+    50% {
+        clip: rect(1px, 24px, 6px, 0);
+    }
+    55% {
+        clip: rect(52px, 24px, 15px, 0);
+    }
+    60% {
+        clip: rect(41px, 24px, 24px, 0);
+    }
+    65% {
+        clip: rect(67px, 24px, 73px, 0);
+    }
+    70% {
+        clip: rect(25px, 24px, 33px, 0);
+    }
+    75% {
+        clip: rect(8px, 24px, 7px, 0);
+    }
+    80% {
+        clip: rect(70px, 24px, 13px, 0);
+    }
+    85% {
+        clip: rect(15px, 24px, 28px, 0);
+    }
+    90% {
+        clip: rect(38px, 24px, 8px, 0);
+    }
+    95% {
+        clip: rect(46px, 24px, 7px, 0);
+    }
+    100% {
+        clip: rect(50px, 24px, 41px, 0);
+    }
+}
+
+
+/*************************************************************************************/
+/************************************MEDIA QUERIES************************************/
+/*************************************************************************************/
+
+
+/* Using SCSS variables to store breakpoints */
+
+$breakpoint-tablet: 892px;
+$breakpoint-tablet-xs: 644px;
+$breakpoint-phone: 452px;
+$breakpoint-phone-xs: 366px;
+
+
+@media screen and (max-width: $breakpoint-tablet) {
+
+    .presentation__stack span {
+        font-size: 3rem;
+    }
+
+}
+
+@media screen and (max-width: $breakpoint-tablet-xs) {
+
+    .presentation__stack span {
+        font-size: 2.25rem;
+    }
+
+    .presentation__left,
+    .presentation__right{
+        font-size: 18px;
+    }
+
+}
+
+@media screen and (max-width: $breakpoint-phone) {
+
+    .presentation__stack span {
+        font-size: 1.8rem;
+    }
+
+    .presentation__left,
+    .presentation__right{
+        font-size: 15px;
+    }
+
+}
+
+@media screen and (max-width: $breakpoint-phone-xs) {
+
+    .presentation__stack span {
+        font-size: 1.55rem;
+    }
+
+}

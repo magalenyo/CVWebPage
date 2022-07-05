@@ -1,0 +1,113 @@
+// @import "../../../assets/scss/variables.scss";
+
+// .header__container{
+//     height: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     // background-color: #dc3545;
+//     background-image:url("../../../assets/images/bg.jpg");
+//     overflow: hidden;
+//     position: fixed;
+//     width: 30%;
+// }
+
+// .header__content{
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     height: 100%;
+//     background-color: rgba(167, 154, 154, 0.1);
+// }
+
+// .header__item{
+//     color: #fff;
+//     font-size: 30px;
+//     margin: 16px auto 16px auto;
+//     transition: .25s;
+//     height: 50px;
+//     // line-height: 25px;
+//     line-height: 1.2;
+//     text-shadow: 4px 5px 4px black;
+
+//     &:hover{
+//         color: $main-font;
+
+//         text-decoration: none;
+//         font-size: 36px;
+//         letter-spacing: 4px;
+//         border-top: 2px solid $main-font;
+//         border-bottom: 2px solid $main-font;
+//     }
+
+//     // &:first-child{
+//     //     margin-left: 0;
+//     // }
+
+//     // &:last-child{
+//     //     margin-right: 0;
+//     // }
+// }
+
+
+// .header__footer{
+//     height: 100px;
+//     display: flex;
+//     flex-direction: column;
+//     width: 100%;
+//     background-color: rgba(0,0,0,.2);
+// }
+
+// .header__footerWrapper{
+//     display: flex;
+//     margin: auto;
+// }
+
+// .header__footerWrapper > a{
+//     margin: 12px 14px;
+//     fill: #fff;
+
+//     :hover{
+//         fill: #cccccc;
+//         transition: .3s;
+//     }
+// }
+
+// // #footerLinkedIn{
+// //     fill: #fff;
+// // }
+
+// // #footerLinkedIn:hover{
+// //     fill: #00bfa5;
+// //     transition: .3s;
+// // }
+
+// // #footerMail{
+// //     fill: #fff;
+// // }
+
+// // #footerMail:hover{
+// //     fill: #00bfa5;
+// //     transition: .3s;
+// // }
+
+// // footerGithub
+
+// .footerAuthor{
+//     color: #fff;
+//     text-align: center;
+// }
+
+
+
+
+// /* MEDIA QUERIES */
+
+// @media (max-width: 320px){
+//     .header__content{
+//         flex-direction: column;
+//         width: 80%;
+//         height: 100%;
+//         display: flex;
+//         margin: auto;
+//     }
+// }
