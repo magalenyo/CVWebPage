@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
 
 import { faCalendarAlt, faEnvelope, faMapMarkerAlt, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
+import { CardviewModel } from '../shared/cardview/model/cardview.model';
 
 @Component({
   selector: 'app-content',
@@ -8,6 +9,13 @@ import { faCalendarAlt, faEnvelope, faMapMarkerAlt, faPhoneAlt } from '@fortawes
   styleUrls: ['./content.component.scss']
 })
 export class ContentComponent implements OnInit {
+
+  public modelA : CardviewModel = {
+    title: "Miguel",
+    description: "descrtiption",
+    backgroundImage: "assets/images/carousel-boundead/1.png",
+    url: "/projects"
+  }
 
   readonly glitchTitleClass = '.content__title__glitch';
   readonly glitchTextClass = '.content__text__glitch';

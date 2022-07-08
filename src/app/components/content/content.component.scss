@@ -284,6 +284,12 @@ $starting-steps-text: 0;
   height: 100%;
 }
 
+.cardview__list{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px 0px;
+    justify-content: space-evenly;
+}
 
 /*************************************************************************************/
 /************************************MEDIA QUERIES************************************/

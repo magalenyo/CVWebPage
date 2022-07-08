@@ -25,7 +25,7 @@ const routes: Routes = [
 ];
 
 const routerOptions: ExtraOptions = {
-  anchorScrolling: 'enabled',
+  anchorScrolling: 'enabled'
   // ...any other options you'd like to use
 };
 

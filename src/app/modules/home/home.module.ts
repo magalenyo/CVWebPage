@@ -11,6 +11,7 @@ import { StepperExperienceComponent } from 'src/app/components/steppers/stepper-
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
 import { HomeRoutingModule } from './home-routing.module';
+import { SharedModule } from 'src/app/components/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { HomeRoutingModule } from './home-routing.module';
     // NgbModule,
     FontAwesomeModule,
     MdbCarouselModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    SharedModule
   ]
 })
 export class HomeModule { }
