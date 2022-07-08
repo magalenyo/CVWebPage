@@ -36,7 +36,40 @@
     background-color: whitesmoke;
     box-shadow: 0 1px 1px rgb(0 0 0 / 10%), 0 2px 2px rgb(0 0 0 / 10%), 0 4px 4px rgb(0 0 0 / 10%), 0 8px 8px rgb(0 0 0 / 10%), 0 16px 16px rgb(0 0 0 / 10%);
     background-image: url(https://images.unsplash.com/photo-1517021897933-0e0319cfbc28?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+    background-size: cover;
+    background-position: center;
+    transition-duration: 1s;
+
+    &:hover {
+        // background-size: auto;
+        animation: animatedBackground 10s linear infinite alternate;
+        align-items:flex-start;
+
+        .cardview__content{
+            margin: auto;
+        }
+    }
 }
+
+@keyframes animatedBackground {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 100% 0;
+    }
+  }
+
+  .cardview__content{
+    transition-duration: 1s;
+    // margin: auto auto 20px auto;
+  }
+
+//   #animate-area {
+
+//     background-repeat: repeat-x;
+//     animation: animatedBackground 10s linear infinite alternate;
+//   }
 
 .cardview::before{
     content: "";
