@@ -8,10 +8,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
