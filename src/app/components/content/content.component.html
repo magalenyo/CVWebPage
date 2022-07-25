@@ -108,32 +108,75 @@
     </div>
 
     <!-- OWN ENGINE, TESSERACT -->
-    <!-- <div class = "content__section">
+    
+    <div class = "content__section" *ngIf="false">
         <h1 class = "content__title content__title__glitch" data-text="Tesseract Video Game Engine">Tesseract Video Game Engine</h1>
         <div class = "content__wrapper">
             <p class = "content__text">In the Master's degree, after the release of RealDisunity, we had to create a video game engine in collaboration with all the students of the masters, and we ended up creating an advanced engine called <b>Tesseract Engine.</b></p>
             <p class = "content__text">This engine would be the final engine that we would use for the creation of our own video game in the Master's degree.</p>
-            <p>I took part in the creation of many UI Components (2D components)</p>
+            
+            <img class = "content__img" src="assets/images/engines/TesseractEngine/tesseract.png">
+            <a class = "content__link" target="_blank" href="https://github.com/PenteractStudios/Tesseract">Tesseract Engine Github repository</a>
+
+            
+            <p class = "content__text">These are the features I worked on:</p>
             <ul class = "content__list">
-                <li>Component Image</li>
-                <p>Which allowed the visual representation of a 2D image, color, etc</p>
-                <li>Component Text</li>
-                <p>A system that would allow different entitites (player and enemies) to make, recieve damage and die.</p>
-                <p>This system includes features to make damage with melee weapons, or throw damaging projectiles.</p>
-                <li>Enemies</li>
+                <li>2D Components</li>
                 <ul>
-                    <li>Melee enemy: a humanoid that would follow the player and attack when is close to it.</li>
-                    <li>Ranged enemy: a humanoid that would follow the player and throw at it when in range of attack.</li>
-                    <li>Slime enemy: the fastest enemy that would follow the player and throw himself at it when in range.</li>
-                    <li>Final boss: a humanoid with different attacks and abilities. It has different phases based on how much health it has, making it harder on low hp.</li>
+                    <li>Component Transform 2D</li>
+                    <p>Allowing a 2D GameObject to be rotated and placed at any position of the screen.</p>
+                    <li>Component Image</li>
+                    <p>Which allowed the visual representation of a 2D image or a color.</p>
+                    <li>Component Text</li>
+                    <p>A colorized multiline 2D text. Could be centered horizontally in 3 different positions: left, center or right.</p>
                 </ul>
-                <li>Experience System</li>
-                <p>A full system that allowed the player to earn experience points when killing enemies, and then a system that would allow the player to spend these points on unlockable abilities and upgrading player stats like max HP, armor, etc.</p>
-                <li>Other</li>
-                <p>And many others like <b>Animations</b>, <b>Traps</b>, <b>Consumables</b>, <b>Maskarea System</b> (the entity that follows the player), etc. Find more information in the documentation!</p>
+
+                <li>Graphics</li>
+                <ul>
+                    <li>MSAA</li>
+                    <p>Allowing a 2D GameObject to be rotated and placed at any position of the screen.</p>
+                    <li>Unlit Shader</li>
+                    <p>Which allowed the visual representation of a 2D image or a color.</p>
+                    <li>Dissolve Shader</li>
+                    <p>A colorized multiline 2D text. Could be centered horizontally in 3 different positions: left, center or right.</p>
+                    <li>Chromatic aberration effect</li>
+                    <p>A colorized multiline 2D text. Could be centered horizontally in 3 different positions: left, center or right.</p>
+                </ul>
+
+                <li>Navigation Module</li>
+                <p>I created the Navigation Module, integrating <b>Recast & Detour libraries</b> to generate a Navigable Mesh from the Engine, and that would also allow a Navigation Agent to roam around the NavMesh, or Navigation Obstacles that would limit the NavMesh movement.</p>
+                <ul>
+                    <li>Component NavAgent</li>
+                    <p>Allows a GameObject to roam a NavMesh. It had a maximum speed and acceleration, and an "Avoid obstacles" option could be set. This was used in the player controller and the enemies controller.</p>
+                    <li>Component Obstacle</li>
+                    <p>Allows a GameObject to modify the NavMesh in order to limit the movement through the NavMesh. The Obstacle can have different sizes and shapes: cylinder or a box shape.</p>
+
+                    <div class="labeledImage">
+                        <p>Generation of a NavMesh with different parameters</p>
+                        <img src="assets/images/engines/TesseractEngine/nav_1.gif">
+                    </div>
+    
+                    <div class="labeledImage">
+                        <p>Component Agent movement</p>
+                        <img src="assets/images/engines/TesseractEngine/nav_2.gif">
+                    </div>
+    
+                    <div class="labeledImage">
+                        <p>Component Obstacle behavior</p>
+                        <img src="assets/images/engines/TesseractEngine/nav_3.gif">
+                    </div>
+    
+                    <div class="labeledImage">
+                        <p>Component Obstacle shapes and sizes</p>
+                        <img src="assets/images/engines/TesseractEngine/nav_4.gif">
+                    </div>
+                </ul>
+
+                
+                
             </ul>
         </div>
-    </div> -->
+    </div>
 
     
 </div>
