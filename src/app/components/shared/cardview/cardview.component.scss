@@ -29,26 +29,41 @@
     display: flex;
     align-items: flex-end;
     overflow: hidden;
-    padding: 1rem;
+    // padding: 1rem;
     width: 100%;
     text-align: center;
     color: whitesmoke;
     background-color: whitesmoke;
     box-shadow: 0 1px 1px rgb(0 0 0 / 10%), 0 2px 2px rgb(0 0 0 / 10%), 0 4px 4px rgb(0 0 0 / 10%), 0 8px 8px rgb(0 0 0 / 10%), 0 16px 16px rgb(0 0 0 / 10%);
-    background-image: url(https://images.unsplash.com/photo-1517021897933-0e0319cfbc28?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+    // background-image: url(https://images.unsplash.com/photo-1517021897933-0e0319cfbc28?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
     background-size: cover;
     background-position: center;
-    transition-duration: 1s;
+    // transition-duration: 1s;
+    // transition:bottom 1s linear;
+
 
     &:hover {
         // background-size: auto;
-        animation: animatedBackground 10s linear infinite alternate;
-        align-items:flex-start;
+        // animation: animatedBackground 10s linear infinite alternate;
+        // align-items:flex-start;
 
         .cardview__content{
+            bottom: 50%;
+            top: 50%;
             margin: auto;
+            justify-content: center;
         }
+        
     }
+}
+
+.cardview__img{
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    /* overflow: hidden; */
+    /* flex-shrink: 0; */
+    object-fit: cover;
 }
 
 @keyframes animatedBackground {
@@ -61,7 +76,7 @@
   }
 
   .cardview__content{
-    transition-duration: 1s;
+    // transition-duration: 1s;
     // margin: auto auto 20px auto;
   }
 
@@ -99,14 +114,20 @@
 }
 
 .cardview__content{
-    position: relative;
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     padding: 1rem;
-    transition: transform var(--d) var(--e);
+    // transition: transform var(--d) var(--e);
     z-index: 1;
+    bottom: 0;
+    // transition: bottom .3s cubic-bezier(0.65, 0.05, 0.36, 1);
+
+    transition: bottom .3s cubic-bezier(0.65, 0.05, 0.36, 1);
+
+
 }
 
 .cardview__title{
