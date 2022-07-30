@@ -9,11 +9,21 @@ import { AppComponent } from './app.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FooterComponent } from './components/footer/footer.component';
+import { BoundeadComponent } from './components/projects/boundead/boundead.component';
+import { RealDisunityComponent } from './components/projects/real-disunity/real-disunity.component';
+import { TesseractComponent } from './components/projects/tesseract/tesseract.component';
+import { ShutdownComponent } from './components/projects/shutdown/shutdown.component';
+import { UnrealEngineMaterialsComponent } from './components/projects/unreal-engine-materials/unreal-engine-materials.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FooterComponent
+    FooterComponent,
+    BoundeadComponent,
+    RealDisunityComponent,
+    TesseractComponent,
+    ShutdownComponent,
+    UnrealEngineMaterialsComponent
   ],
   imports: [
     BrowserModule,
