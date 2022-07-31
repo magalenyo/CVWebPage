@@ -14,6 +14,34 @@ export class ContentComponent implements OnInit {
     title: "Miguel",
     description: "descrtiption",
     backgroundImage: "assets/images/carousel-boundead/1.png",
+    url: "/projects/boundead"
+  }
+
+  public modelB : CardviewModel = {
+    title: "Miguel",
+    description: "descrtiption",
+    backgroundImage: "assets/images/carousel-boundead/1.png",
+    url: "/projects"
+  }
+
+  public modelC : CardviewModel = {
+    title: "Miguel",
+    description: "descrtiption",
+    backgroundImage: "assets/images/carousel-boundead/1.png",
+    url: "/projects"
+  }
+
+  public modelD : CardviewModel = {
+    title: "Miguel",
+    description: "descrtiption",
+    backgroundImage: "assets/images/carousel-boundead/1.png",
+    url: "/projects"
+  }
+
+  public modelE: CardviewModel = {
+    title: "Miguel",
+    description: "descrtiption",
+    backgroundImage: "assets/images/carousel-boundead/1.png",
     url: "/projects"
   }
 

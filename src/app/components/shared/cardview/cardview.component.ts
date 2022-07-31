@@ -17,7 +17,6 @@ export class CardviewComponent implements OnInit {
   }
 
   navigate(): void {
-    
     this.router.navigate([this.model.url]);
   }
 

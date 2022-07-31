@@ -14,6 +14,9 @@ import { RealDisunityComponent } from './components/projects/real-disunity/real-
 import { TesseractComponent } from './components/projects/tesseract/tesseract.component';
 import { ShutdownComponent } from './components/projects/shutdown/shutdown.component';
 import { UnrealEngineMaterialsComponent } from './components/projects/unreal-engine-materials/unreal-engine-materials.component';
+import { RouterModule } from '@angular/router';
+import { ProjectsModule } from './modules/projects/projects.module';
+import { SharedModule } from './components/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { UnrealEngineMaterialsComponent } from './components/projects/unreal-eng
     AppRoutingModule,
     NgbModule,
     FontAwesomeModule,
-    MdbCarouselModule
+    SharedModule,
+    // MdbCarouselModule,
+    RouterModule,
+    ProjectsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -12,29 +12,31 @@ import { ProjectsComponent } from "./projects.component";
 export const routes: Routes = [
     {
         path: '',
-        // component: ProjectsComponent
-        component: NotFoundComponent
+        component: ProjectsComponent,
+        children: [
+            { 
+                path: ProjectUrls.BOUNDEAD,
+                component: BoundeadComponent
+            },
+            { 
+                path: ProjectUrls.REAL_DISUNITY,
+                component: RealDisunityComponent
+            },
+            { 
+                path: ProjectUrls.TESSERACT,
+                component: TesseractComponent
+            },
+            { 
+                path: ProjectUrls.SHUTDOWN,
+                component: ShutdownComponent
+            },
+            { 
+                path: ProjectUrls.UNREAL_ENGINE_MATERIALS,
+                component: UnrealEngineMaterialsComponent
+            }
+        ]
+        // component: NotFoundComponent
     },
-    { 
-        path: ProjectUrls.BOUNDEAD,
-        component: BoundeadComponent
-    },
-    { 
-        path: ProjectUrls.REAL_DISUNITY,
-        component: RealDisunityComponent
-    },
-    { 
-        path: ProjectUrls.TESSERACT,
-        component: TesseractComponent
-    },
-    { 
-        path: ProjectUrls.SHUTDOWN,
-        component: ShutdownComponent
-    },
-    { 
-        path: ProjectUrls.UNREAL_ENGINE_MATERIALS,
-        component: UnrealEngineMaterialsComponent
-    }
 ]
 
 @NgModule({

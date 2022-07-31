@@ -16,15 +16,13 @@ import { SharedModule } from 'src/app/components/shared/shared.module';
     HomeComponent,
     PresentationComponent,
     ContentComponent,
-    CarouselBoundeadComponent,
     StepperEducationComponent,
     StepperExperienceComponent
   ],
   imports: [
     CommonModule,
-    // NgbModule,
-    FontAwesomeModule,
-    MdbCarouselModule,
+    // FontAwesomeModule,
+    // MdbCarouselModule,
     HomeRoutingModule,
     SharedModule
   ]
