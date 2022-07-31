@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
 
 import { faCalendarAlt, faEnvelope, faMapMarkerAlt, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
+import { ProjectUrls } from 'src/app/constants/app.constants';
 import { CardviewModel } from '../shared/cardview/model/cardview.model';
 
 @Component({
@@ -10,39 +11,39 @@ import { CardviewModel } from '../shared/cardview/model/cardview.model';
 })
 export class ContentComponent implements OnInit {
 
-  public modelA : CardviewModel = {
-    title: "Miguel",
+  public cardviewBoundeadModel : CardviewModel = {
+    title: "Boundead",
     description: "descrtiption",
     backgroundImage: "assets/images/carousel-boundead/1.png",
-    url: "/projects/boundead"
+    url: "/projects/" + ProjectUrls.BOUNDEAD
   }
 
-  public modelB : CardviewModel = {
-    title: "Miguel",
+  public cardviewRealDisunityModel : CardviewModel = {
+    title: "Real Disunity Engine",
     description: "descrtiption",
     backgroundImage: "assets/images/carousel-boundead/1.png",
-    url: "/projects"
+    url: "/projects/" + ProjectUrls.REAL_DISUNITY
   }
 
-  public modelC : CardviewModel = {
-    title: "Miguel",
+  public cardviewTesseractModel : CardviewModel = {
+    title: "Tesseract Engine",
     description: "descrtiption",
     backgroundImage: "assets/images/carousel-boundead/1.png",
-    url: "/projects"
+    url: "/projects/" + ProjectUrls.TESSERACT
   }
 
-  public modelD : CardviewModel = {
-    title: "Miguel",
+  public cardviewShutdownModel : CardviewModel = {
+    title: "Shutdown Videogame",
     description: "descrtiption",
     backgroundImage: "assets/images/carousel-boundead/1.png",
-    url: "/projects"
+    url: "/projects/" + ProjectUrls.SHUTDOWN
   }
 
-  public modelE: CardviewModel = {
-    title: "Miguel",
+  public cardviewUEMaterialsModel: CardviewModel = {
+    title: "Unreal Engine Materials",
     description: "descrtiption",
     backgroundImage: "assets/images/carousel-boundead/1.png",
-    url: "/projects"
+    url: "/projects/" + ProjectUrls.UNREAL_ENGINE_MATERIALS
   }
 
   readonly glitchTitleClass = '.content__title__glitch';
