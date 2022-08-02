@@ -14,6 +14,7 @@ export class ProjectsComponent implements OnInit {
     this.initRandomGlitchTimer();
   }
 
+  //TODO: Change this into a GlitchText component
   initRandomGlitchTimer() {
     const titleElements = this.elem.nativeElement.querySelectorAll(glitchTitleClass);
     if (titleElements){

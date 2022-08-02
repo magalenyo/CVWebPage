@@ -137,3 +137,59 @@
 .cardview__description{
 
 }
+
+
+/*************************************************************************************/
+/************************************MEDIA QUERIES************************************/
+/*************************************************************************************/
+
+$breakpoint-laptop: 1376px;
+$breakpoint-tablet: 768px;
+$breakpoint-phone: 452px;
+
+@media screen and (max-width: $breakpoint-laptop) {
+
+    :host{
+        flex: 1 0 calc(50% - 40px);
+        margin: 20px;
+
+        &:nth-child(odd){
+            margin-left: 0;
+        }
+
+        &:nth-child(even){
+            margin-right: 0;
+        }
+
+        &:nth-child(odd):last-child{
+            margin-left: 0;
+        }
+    }
+
+    :host:nth-child(odd):last-child{
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+
+    :host{
+        flex: 1 0 calc(100% - 40px);
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    
+  
+}
+
+
+@media screen and (max-width: $breakpoint-phone) {
+
+  
+
+}
+
+///************** CONTENT ****************///

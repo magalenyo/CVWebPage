@@ -14,28 +14,28 @@ export class ContentComponent implements OnInit {
 
   public cardviewBoundeadModel : CardviewModel = {
     title: "Boundead",
-    description: "descrtiption",
+    description: "Action/Platform game made in Unity for Bachelor's degree final project",
     backgroundImage: "assets/images/carousel-boundead/1.png",
     url: "/projects/" + ProjectUrls.BOUNDEAD
   }
 
   public cardviewRealDisunityModel : CardviewModel = {
     title: "Real Disunity Engine",
-    description: "descrtiption",
-    backgroundImage: "assets/images/carousel-boundead/1.png",
+    description: "Basic C++ OpenGL Game Engine from scratch",
+    backgroundImage: "assets/images/engines/RealDisunityEngine/RealDisunity1.png",
     url: "/projects/" + ProjectUrls.REAL_DISUNITY
   }
 
   public cardviewTesseractModel : CardviewModel = {
     title: "Tesseract Engine",
-    description: "descrtiption",
-    backgroundImage: "assets/images/carousel-boundead/1.png",
+    description: "Advanced C++ OpenGL Game Engine from scratch",
+    backgroundImage: "assets/images/engines/TesseractEngine/tesseract.png",
     url: "/projects/" + ProjectUrls.TESSERACT
   }
 
   public cardviewShutdownModel : CardviewModel = {
     title: "Shutdown Videogame",
-    description: "descrtiption",
+    description: "Top down shooter video game made with own engine",
     backgroundImage: "assets/images/carousel-boundead/1.png",
     url: "/projects/" + ProjectUrls.SHUTDOWN
   }
