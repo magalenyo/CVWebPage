@@ -2,6 +2,7 @@ import { Component, ElementRef, OnInit } from '@angular/core';
 
 import { faCalendarAlt, faEnvelope, faMapMarkerAlt, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 import { ProjectUrls } from 'src/app/constants/app.constants';
+import { glitchMaxDelay, glitchTextClass, glitchTitleClass } from '../shared/cardview/constants';
 import { CardviewModel } from '../shared/cardview/model/cardview.model';
 
 @Component({
@@ -46,11 +47,6 @@ export class ContentComponent implements OnInit {
     url: "/projects/" + ProjectUrls.UNREAL_ENGINE_MATERIALS
   }
 
-  readonly glitchTitleClass = '.content__title__glitch';
-  readonly glitchTextClass = '.content__text__glitch';
-
-  readonly glitchMaxDelay = 3;
-
   faCalendar = faCalendarAlt;
   faMap = faMapMarkerAlt;
   faMail = faEnvelope;
@@ -60,27 +56,21 @@ export class ContentComponent implements OnInit {
 
   ngOnInit(): void {
     this.initRandomGlitchTimer();
-
-  }
-
-  ngAfterViewInit(): void{
-    this.initRandomGlitchTimer();
-
   }
 
   initRandomGlitchTimer() {
-    const titleElements = this.elem.nativeElement.querySelectorAll(this.glitchTitleClass);
+    const titleElements = this.elem.nativeElement.querySelectorAll(glitchTitleClass);
     if (titleElements){
       titleElements.forEach(element => {
-        var randomDuration = Math.random() * this.glitchMaxDelay;
+        var randomDuration = Math.random() * glitchMaxDelay;
         element.style.setProperty('--randomDelay', randomDuration+'s');
       });
     }
 
-    const textElements = this.elem.nativeElement.querySelectorAll(this.glitchTextClass);
+    const textElements = this.elem.nativeElement.querySelectorAll(glitchTextClass);
     if (textElements){
       textElements.forEach(element => {
-        var randomDuration = Math.random() * this.glitchMaxDelay;
+        var randomDuration = Math.random() * glitchMaxDelay;
         element.style.setProperty('--randomDelay', randomDuration+'s');
       });
     }
