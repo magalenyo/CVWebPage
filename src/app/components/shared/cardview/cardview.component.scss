@@ -102,12 +102,6 @@
     transition: transform calc(var(--d) * 2) var(--e);
 }
 
-.cardview--material::before,
-.cardview--material::after{
-    display: none;
-}
-
-
 .cardview__content{
     position: absolute;
     display: flex;
@@ -121,11 +115,32 @@
 }
 
 .cardview__title{
-
+    transition-duration: .4s;
 }
 
 .cardview__description{
 
+}
+
+.cardview--material::before,
+.cardview--material::after{
+    display: none;
+}
+
+.cardview--material .cardview__content{
+    padding: 0;
+}
+
+.cardview--material .cardview__title{
+    margin: 0;
+    padding: 8px 8px;
+    background-color: #0000007a;
+    width: 100%;
+}
+
+.cardview--material:hover .cardview__title{
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 
