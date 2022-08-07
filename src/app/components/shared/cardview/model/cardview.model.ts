@@ -3,4 +3,5 @@ export class CardviewModel {
     description: string;
     backgroundImage: string;
     url: string;
+    material?: boolean = false;
 }

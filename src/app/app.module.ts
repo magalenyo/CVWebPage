@@ -17,6 +17,15 @@ import { UnrealEngineMaterialsComponent } from './components/projects/unreal-eng
 import { RouterModule } from '@angular/router';
 import { ProjectsModule } from './modules/projects/projects.module';
 import { SharedModule } from './components/shared/shared.module';
+import { VolumetricIceComponent } from './components/projects/unreal-engine-materials/volumetric-ice/volumetric-ice.component';
+import { NodeExpressApiComponent } from './components/projects/node-express-api/node-express-api.component';
+import { BubbleComponent } from './components/projects/unreal-engine-materials/bubble/bubble.component';
+import { MagicComponent } from './components/projects/unreal-engine-materials/magic/magic.component';
+import { SlimeComponent } from './components/projects/unreal-engine-materials/slime/slime.component';
+import { GlassComponent } from './components/projects/unreal-engine-materials/glass/glass.component';
+import { SunComponent } from './components/projects/unreal-engine-materials/sun/sun.component';
+import { ScreenComponent } from './components/projects/unreal-engine-materials/screen/screen.component';
+import { GlitterComponent } from './components/projects/unreal-engine-materials/glitter/glitter.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +35,16 @@ import { SharedModule } from './components/shared/shared.module';
     RealDisunityComponent,
     TesseractComponent,
     ShutdownComponent,
-    UnrealEngineMaterialsComponent
+    UnrealEngineMaterialsComponent,
+    VolumetricIceComponent,
+    NodeExpressApiComponent,
+    BubbleComponent,
+    MagicComponent,
+    SlimeComponent,
+    GlassComponent,
+    SunComponent,
+    ScreenComponent,
+    GlitterComponent
   ],
   imports: [
     BrowserModule,

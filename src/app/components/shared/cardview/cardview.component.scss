@@ -75,17 +75,6 @@
     }
   }
 
-  .cardview__content{
-    // transition-duration: 1s;
-    // margin: auto auto 20px auto;
-  }
-
-//   #animate-area {
-
-//     background-repeat: repeat-x;
-//     animation: animatedBackground 10s linear infinite alternate;
-//   }
-
 .cardview::before{
     content: "";
     position: absolute;
@@ -113,21 +102,22 @@
     transition: transform calc(var(--d) * 2) var(--e);
 }
 
+.cardview--material::before,
+.cardview--material::after{
+    display: none;
+}
+
+
 .cardview__content{
     position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 1rem;
-    // transition: transform var(--d) var(--e);
+    padding: 8px 28px;
     z-index: 1;
     bottom: 0;
-    // transition: bottom .3s cubic-bezier(0.65, 0.05, 0.36, 1);
-
     transition: bottom .3s cubic-bezier(0.65, 0.05, 0.36, 1);
-
-
 }
 
 .cardview__title{

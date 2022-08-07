@@ -1,9 +1,8 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
 
 import { faCalendarAlt, faEnvelope, faMapMarkerAlt, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
-import { ProjectUrls } from 'src/app/constants/app.constants';
 import { glitchMaxDelay, glitchTextClass, glitchTitleClass } from '../shared/cardview/constants';
-import { CardviewModel } from '../shared/cardview/model/cardview.model';
+import { cardviewBoundeadModel, cardviewNodeExpressApiModel, cardviewRealDisunityModel, cardviewShutdownModel, cardviewTesseractModel, cardviewUEBubbleModel, cardviewUEGlassModel, cardviewUEGlitterBallModel, cardviewUEMagicSphereModel, cardviewUEMaterialsModel, cardviewUEScreenModel, cardviewUESlimeModel, cardviewUESunModel, cardviewUEVolumetricIceModel } from './consants';
 
 @Component({
   selector: 'app-content',
@@ -12,40 +11,21 @@ import { CardviewModel } from '../shared/cardview/model/cardview.model';
 })
 export class ContentComponent implements OnInit {
 
-  public cardviewBoundeadModel : CardviewModel = {
-    title: "Boundead",
-    description: "Action/Platform game made in Unity for Bachelor's degree final project",
-    backgroundImage: "assets/images/carousel-boundead/1.png",
-    url: "/projects/" + ProjectUrls.BOUNDEAD
-  }
+  public cardviewBoundeadModel = cardviewBoundeadModel;
+  public cardviewRealDisunityModel = cardviewRealDisunityModel;
+  public cardviewTesseractModel = cardviewTesseractModel;
+  public cardviewShutdownModel = cardviewShutdownModel;
+  public cardviewUEMaterialsModel = cardviewUEMaterialsModel;
+  public cardviewNodeExpressApiModel = cardviewNodeExpressApiModel;
 
-  public cardviewRealDisunityModel : CardviewModel = {
-    title: "Real Disunity Engine",
-    description: "Basic C++ OpenGL Game Engine from scratch",
-    backgroundImage: "assets/images/engines/RealDisunityEngine/RealDisunity1.png",
-    url: "/projects/" + ProjectUrls.REAL_DISUNITY
-  }
-
-  public cardviewTesseractModel : CardviewModel = {
-    title: "Tesseract Engine",
-    description: "Advanced C++ OpenGL Game Engine from scratch",
-    backgroundImage: "assets/images/engines/TesseractEngine/tesseract.png",
-    url: "/projects/" + ProjectUrls.TESSERACT
-  }
-
-  public cardviewShutdownModel : CardviewModel = {
-    title: "Shutdown Videogame",
-    description: "Top down shooter video game made with own engine",
-    backgroundImage: "assets/images/carousel-boundead/1.png",
-    url: "/projects/" + ProjectUrls.SHUTDOWN
-  }
-
-  public cardviewUEMaterialsModel: CardviewModel = {
-    title: "Unreal Engine Materials",
-    description: "descrtiption",
-    backgroundImage: "assets/images/carousel-boundead/1.png",
-    url: "/projects/" + ProjectUrls.UNREAL_ENGINE_MATERIALS
-  }
+  public cardviewUEVolumetricIceModel = cardviewUEVolumetricIceModel;
+  public cardviewUEGlitterBallModel = cardviewUEGlitterBallModel;
+  public cardviewUEMagicSphereModel = cardviewUEMagicSphereModel;
+  public cardviewUESlimeModel = cardviewUESlimeModel;
+  public cardviewUEGlassModel = cardviewUEGlassModel;
+  public cardviewUEBubbleModel = cardviewUEBubbleModel;
+  public cardviewUESunModel = cardviewUESunModel;
+  public cardviewUEScreenModel = cardviewUEScreenModel;
 
   faCalendar = faCalendarAlt;
   faMap = faMapMarkerAlt;
