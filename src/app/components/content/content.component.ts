@@ -2,7 +2,7 @@ import { Component, ElementRef, OnInit } from '@angular/core';
 
 import { faCalendarAlt, faEnvelope, faMapMarkerAlt, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 import { glitchMaxDelay, glitchTextClass, glitchTitleClass } from '../shared/cardview/constants';
-import { cardviewBoundeadModel, cardviewNodeExpressApiModel, cardviewRealDisunityModel, cardviewShutdownModel, cardviewTesseractModel, cardviewUEBubbleModel, cardviewUEGlassModel, cardviewUEGlitterBallModel, cardviewUEMagicSphereModel, cardviewUEMaterialsModel, cardviewUEScreenModel, cardviewUESlimeModel, cardviewUESunModel, cardviewUEVolumetricIceModel } from './consants';
+import { cardviewBoundeadModel, cardviewNodeExpressApiModel, cardviewRealDisunityModel, cardviewShutdownModel, cardviewTesseractModel, cardviewUEBubbleModel, cardviewUEGlassModel, cardviewUEGlitterBallModel, cardviewUEMagicSphereModel, cardviewUEMaterialsModel, cardviewUEScreenModel, cardviewUESlimeModel, cardviewUESunModel, cardviewUEVolumetricIceModel } from './constants';
 
 @Component({
   selector: 'app-content',

@@ -27,7 +27,7 @@ export const cardviewTesseractModel : CardviewModel = {
 export const cardviewShutdownModel : CardviewModel = {
     title: "Shutdown Videogame",
     description: "Top down shooter video game made with own engine",
-    backgroundImage: "assets/images/carousel-boundead/1.png",
+    backgroundImage: "assets/images/cards/shutdown.png",
     url: "/projects/" + ProjectUrls.SHUTDOWN
 }
 
