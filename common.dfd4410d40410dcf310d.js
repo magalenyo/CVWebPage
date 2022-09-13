@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmiguelangelbuenorivera=self.webpackChunkmiguelangelbuenorivera||[]).push([[592],{2809:function(c,e,t){t.d(e,{cX:function(){return n},Tw:function(){return u},w8:function(){return l}});var n=".content__title__glitch",u=".content__text__glitch",l=3}}]);
