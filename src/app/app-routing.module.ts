@@ -26,6 +26,7 @@ const routes: Routes = [
 
 const routerOptions: ExtraOptions = {
   anchorScrolling: 'enabled',
+  scrollPositionRestoration: 'enabled'
   // ...any other options you'd like to use
 };
 

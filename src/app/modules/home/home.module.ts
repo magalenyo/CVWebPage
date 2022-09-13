@@ -9,22 +9,22 @@ import { StepperExperienceComponent } from 'src/app/components/steppers/stepper-
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
 import { HomeRoutingModule } from './home-routing.module';
+import { SharedModule } from 'src/app/components/shared/shared.module';
 
 @NgModule({
   declarations: [
     HomeComponent,
     PresentationComponent,
     ContentComponent,
-    CarouselBoundeadComponent,
     StepperEducationComponent,
     StepperExperienceComponent
   ],
   imports: [
     CommonModule,
-    // NgbModule,
-    FontAwesomeModule,
-    MdbCarouselModule,
-    HomeRoutingModule
+    // FontAwesomeModule,
+    // MdbCarouselModule,
+    HomeRoutingModule,
+    SharedModule
   ]
 })
 export class HomeModule { }

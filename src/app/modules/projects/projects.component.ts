@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
+import { glitchMaxDelay, glitchTextClass, glitchTitleClass } from 'src/app/components/shared/cardview/constants';
 
 @Component({
   selector: 'app-projects',
@@ -7,9 +8,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private elem: ElementRef) { }
 
   ngOnInit(): void {
+    this.initRandomGlitchTimer();
+  }
+
+  //TODO: Change this into a GlitchText component
+  initRandomGlitchTimer() {
+    const titleElements = this.elem.nativeElement.querySelectorAll(glitchTitleClass);
+    if (titleElements){
+      titleElements.forEach(element => {
+        var randomDuration = Math.random() * glitchMaxDelay;
+        element.style.setProperty('--randomDelay', randomDuration+'s');
+      });
+    }
+
+    const textElements = this.elem.nativeElement.querySelectorAll(glitchTextClass);
+    if (textElements){
+      textElements.forEach(element => {
+        var randomDuration = Math.random() * glitchMaxDelay;
+        element.style.setProperty('--randomDelay', randomDuration+'s');
+      });
+    }
+    
   }
 
 }

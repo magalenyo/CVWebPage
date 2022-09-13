@@ -1,0 +1,7 @@
+<div class="cardview" [ngClass]="{'cardview--material': model.material}" (click)="navigate()">
+    <img class="cardview__img" src="{{model.backgroundImage}}">
+    <div class="cardview__content">
+        <h2 class="cardview__title">{{ model.title }}</h2>
+        <p class="cardview__description">{{ model.description }}</p>
+    </div>
+</div>
