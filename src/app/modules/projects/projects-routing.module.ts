@@ -6,6 +6,7 @@ import { RealDisunityComponent } from "src/app/components/projects/real-disunity
 import { ShutdownComponent } from "src/app/components/projects/shutdown/shutdown.component";
 import { TesseractComponent } from "src/app/components/projects/tesseract/tesseract.component";
 import { BubbleComponent } from "src/app/components/projects/unreal-engine-materials/bubble/bubble.component";
+import { DragonComponent } from "src/app/components/projects/unreal-engine-materials/dragon/dragon.component";
 import { GlassComponent } from "src/app/components/projects/unreal-engine-materials/glass/glass.component";
 import { GlitterComponent } from "src/app/components/projects/unreal-engine-materials/glitter/glitter.component";
 import { MagicComponent } from "src/app/components/projects/unreal-engine-materials/magic/magic.component";
@@ -42,6 +43,10 @@ export const routes: Routes = [
                 path: ProjectUrls.UNREAL_ENGINE_MATERIALS,
                 component: UnrealEngineMaterialsComponent,
                 children: [
+                    { 
+                        path: UEMaterialsUrls.DRAGON,
+                        component: DragonComponent
+                    },
                     { 
                         path: UEMaterialsUrls.VOLUMETRIC_ICE,
                         component: VolumetricIceComponent

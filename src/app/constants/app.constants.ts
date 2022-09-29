@@ -14,6 +14,7 @@ export enum ProjectUrls {
 }
 
 export enum UEMaterialsUrls {
+    DRAGON = 'dragon',
     VOLUMETRIC_ICE = 'volumetric-ice',
     GLITTER = 'glitter',
     MAGIC = 'magic',

@@ -26,6 +26,7 @@ import { GlassComponent } from './components/projects/unreal-engine-materials/gl
 import { SunComponent } from './components/projects/unreal-engine-materials/sun/sun.component';
 import { ScreenComponent } from './components/projects/unreal-engine-materials/screen/screen.component';
 import { GlitterComponent } from './components/projects/unreal-engine-materials/glitter/glitter.component';
+import { DragonComponent } from './components/projects/unreal-engine-materials/dragon/dragon.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { GlitterComponent } from './components/projects/unreal-engine-materials/
     GlassComponent,
     SunComponent,
     ScreenComponent,
-    GlitterComponent
+    GlitterComponent,
+    DragonComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +54,6 @@ import { GlitterComponent } from './components/projects/unreal-engine-materials/
     NgbModule,
     FontAwesomeModule,
     SharedModule,
-    // MdbCarouselModule,
     RouterModule,
     ProjectsModule
   ],

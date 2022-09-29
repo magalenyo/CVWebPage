@@ -47,6 +47,14 @@ export const cardviewNodeExpressApiModel: CardviewModel = {
 
 // UNREAL ENGINE
 
+export const cardviewUEDragonModel: CardviewModel = {
+    title: "Dragon",
+    description: "",
+    backgroundImage: "https://pouch.jumpshare.com/preview/hvrejRbuzf47-DW8jlmBE9BTukFc51wM4cXLsAGuzwvRjBqoVQfIfwFqSATifUxBTVAGIWkwYDLZ2vhxBaWyLBA1jQB_zmxltR5bgJ1-nls",
+    url: "/projects/" + ProjectUrls.UNREAL_ENGINE_MATERIALS + "/" + UEMaterialsUrls.DRAGON,
+    material: true
+}
+
 export const cardviewUEVolumetricIceModel: CardviewModel = {
     title: "Volumetric Ice",
     description: "",
