@@ -40,10 +40,12 @@ const cardviewNodeExpressApiModel: CardviewModel = {
 
 // UNREAL ENGINE
 
+const assetsMaterials = "assets/images/ue-materials/";
+
 const cardviewUEDragonModel: CardviewModel = {
     title: "Dragon",
     description: "",
-    backgroundImage: "assets/images/ue-materials/dragon/cardview.mp4",
+    backgroundImage: assetsMaterials + "dragon/cardview.mp4",
     url: "/projects/" + ProjectUrls.UNREAL_ENGINE_MATERIALS + "/" + UEMaterialsUrls.DRAGON,
     material: true,
     video: true
@@ -52,63 +54,70 @@ const cardviewUEDragonModel: CardviewModel = {
 const cardviewUEVolumetricIceModel: CardviewModel = {
     title: "Volumetric Ice",
     description: "",
-    backgroundImage: "https://i.gyazo.com/d5cd2fe1dc6111340374992f3188cc39.gif",
+    backgroundImage: assetsMaterials + "volumetric-ice/cardview.mp4",
     url: "/projects/" + ProjectUrls.UNREAL_ENGINE_MATERIALS + "/" + UEMaterialsUrls.VOLUMETRIC_ICE,
-    material: true
+    material: true,
+    video: true
 }
 
 const cardviewUEGlitterBallModel: CardviewModel = {
     title: "Glitter Ball",
     description: "",
-    backgroundImage: "https://i.gyazo.com/b2ff49f694c79ecf2dae76f69de96321.gif",
+    backgroundImage: assetsMaterials + "glitter/cardview.mp4",
     url: "/projects/" + ProjectUrls.UNREAL_ENGINE_MATERIALS + "/" + UEMaterialsUrls.GLITTER,
-    material: true
+    material: true,
+    video: true
 }
 
 const cardviewUEMagicSphereModel: CardviewModel = {
     title: "Magic Sphere",
     description: "",
-    backgroundImage: "https://i.gyazo.com/c288e214a26710695a4e251c6ead20a9.gif",
+    backgroundImage: assetsMaterials + "magic/cardview.mp4",
     url: "/projects/" + ProjectUrls.UNREAL_ENGINE_MATERIALS + "/" + UEMaterialsUrls.MAGIC,
-    material: true
+    material: true,
+    video: true
 }
 
 const cardviewUESlimeModel: CardviewModel = {
     title: "Slime",
     description: "",
-    backgroundImage: "https://i.gyazo.com/7cf85a924acbafc2c7cfa32f2ef3cd40.gif",
+    backgroundImage: assetsMaterials + "slime/cardview.mp4",
     url: "/projects/" + ProjectUrls.UNREAL_ENGINE_MATERIALS + "/" + UEMaterialsUrls.SLIME,
-    material: true
+    material: true,
+    video: true
 }
 
 const cardviewUEGlassModel: CardviewModel = {
     title: "Glass",
     description: "",
-    backgroundImage: "https://i.gyazo.com/e13dbb2b36a4be0c9df2c4ffb298a1ff.gif",
+    backgroundImage: assetsMaterials + "glass/cardview.mp4",
     url: "/projects/" + ProjectUrls.UNREAL_ENGINE_MATERIALS + "/" + UEMaterialsUrls.GLASS,
-    material: true
+    material: true,
+    video: true
 }
 
 const cardviewUEBubbleModel: CardviewModel = {
     title: "Bubble",
     description: "",
-    backgroundImage: "https://i.gyazo.com/82ef2f0e824fdef4fb5b62e5cc809141.gif",
+    backgroundImage: assetsMaterials + "bubble/cardview.mp4",
     url: "/projects/" + ProjectUrls.UNREAL_ENGINE_MATERIALS + "/" + UEMaterialsUrls.BUBBLE,
-    material: true
+    material: true,
+    video: true
 }
 
 const cardviewUESunModel: CardviewModel = {
     title: "Sun",
     description: "",
-    backgroundImage: "https://i.gyazo.com/fe9657c42421d6385b5d08659f432a78.gif",
+    backgroundImage: assetsMaterials + "sun/cardview.mp4",
     url: "/projects/" + ProjectUrls.UNREAL_ENGINE_MATERIALS + "/" + UEMaterialsUrls.SUN,
-    material: true
+    material: true,
+    video: true
 }
 
 const cardviewUEScreenModel: CardviewModel = {
     title: "TV Screen",
     description: "",
-    backgroundImage: "assets/images/ue-materials/screen/cardview.mp4",
+    backgroundImage: assetsMaterials + "screen/cardview.mp4",
     url: "/projects/" + ProjectUrls.UNREAL_ENGINE_MATERIALS + "/" + UEMaterialsUrls.SCREEN,
     material: true,
     video: true
@@ -116,10 +125,12 @@ const cardviewUEScreenModel: CardviewModel = {
 
 // Motion Graphics
 
+const assetsMotionGraphics = "assets/videos/InfiniteLoops/";
+
 const cardviewMGRetro: CardviewModel = {
     title: "Retro 80s",
     description: "",
-    backgroundImage: "assets/videos/InfiniteLoops/ILRetro.mp4",
+    backgroundImage: assetsMotionGraphics + "ILRetro.mp4",
     url: "/projects/" + ProjectUrls.MOTION_GRAPHICS + "/" + MotionGraphicsUrls.RETRO,
     material: true,
     video: true
@@ -128,7 +139,7 @@ const cardviewMGRetro: CardviewModel = {
 const cardviewMGCyber: CardviewModel = {
     title: "Cyber Triangle",
     description: "",
-    backgroundImage: "assets/videos/InfiniteLoops/ILTriangles.mp4",
+    backgroundImage: assetsMotionGraphics + "ILTriangles.mp4",
     url: "/projects/" + ProjectUrls.MOTION_GRAPHICS + "/" + MotionGraphicsUrls.CYBER,
     material: true,
     video: true
