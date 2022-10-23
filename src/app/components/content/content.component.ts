@@ -2,7 +2,7 @@ import { Component, ElementRef, OnInit } from '@angular/core';
 
 import { faCalendarAlt, faEnvelope, faMapMarkerAlt, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 import { glitchMaxDelay, glitchTextClass, glitchTitleClass } from '../shared/cardview/constants';
-import { cardviewBoundeadModel, cardviewNodeExpressApiModel, cardviewRealDisunityModel, cardviewShutdownModel, cardviewTesseractModel, cardviewUEBubbleModel, cardviewUEDragonModel, cardviewUEGlassModel, cardviewUEGlitterBallModel, cardviewUEMagicSphereModel, cardviewUEMaterialsModel, cardviewUEScreenModel, cardviewUESlimeModel, cardviewUESunModel, cardviewUEVolumetricIceModel } from './constants';
+import { listMaterials, listMotionGraphics, listProjects } from './constants';
 
 @Component({
   selector: 'app-content',
@@ -10,23 +10,10 @@ import { cardviewBoundeadModel, cardviewNodeExpressApiModel, cardviewRealDisunit
   styleUrls: ['./content.component.scss']
 })
 export class ContentComponent implements OnInit {
-
-  public cardviewBoundeadModel = cardviewBoundeadModel;
-  public cardviewRealDisunityModel = cardviewRealDisunityModel;
-  public cardviewTesseractModel = cardviewTesseractModel;
-  public cardviewShutdownModel = cardviewShutdownModel;
-  public cardviewUEMaterialsModel = cardviewUEMaterialsModel;
-  public cardviewNodeExpressApiModel = cardviewNodeExpressApiModel;
-
-  public cardviewUEDragonModel = cardviewUEDragonModel;
-  public cardviewUEVolumetricIceModel = cardviewUEVolumetricIceModel;
-  public cardviewUEGlitterBallModel = cardviewUEGlitterBallModel;
-  public cardviewUEMagicSphereModel = cardviewUEMagicSphereModel;
-  public cardviewUESlimeModel = cardviewUESlimeModel;
-  public cardviewUEGlassModel = cardviewUEGlassModel;
-  public cardviewUEBubbleModel = cardviewUEBubbleModel;
-  public cardviewUESunModel = cardviewUESunModel;
-  public cardviewUEScreenModel = cardviewUEScreenModel;
+  
+  public listProjects = listProjects;
+  public listMaterials = listMaterials;
+  public listMotionGraphics = listMotionGraphics;
 
   faCalendar = faCalendarAlt;
   faMap = faMapMarkerAlt;

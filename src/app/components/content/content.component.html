@@ -3,7 +3,6 @@
 <div id = "content" class = "content__body">
 
     <!-- ABOUT ME -->
-    <div class ="wrapper">
     <div class = "content__section">
         <h1 class = "content__title content__title__glitch" data-text="About me">About me</h1>
 
@@ -27,7 +26,6 @@
             </div>
         </div>
     </div>
-</div>
 
     <!-- EDUCATION -->
     <div class = "content__section">
@@ -56,12 +54,7 @@
     <div class = "content__section">
         <h1 class = "content__title content__title__glitch" data-text="Projects">Projects</h1>
         <div class="cardview__list">
-            <app-cardview [model]="cardviewBoundeadModel"></app-cardview>
-            <app-cardview [model]="cardviewRealDisunityModel"></app-cardview>
-            <app-cardview [model]="cardviewTesseractModel"></app-cardview>
-            <app-cardview [model]="cardviewShutdownModel"></app-cardview>
-            <!-- <app-cardview [model]="cardviewUEMaterialsModel"></app-cardview> -->
-            <app-cardview [model]="cardviewNodeExpressApiModel"></app-cardview>
+            <app-cardview *ngFor="let model of listProjects" [model]="model"></app-cardview>
         </div>
     </div>
 
@@ -69,17 +62,16 @@
     <div class = "content__section">
         <h1 class = "content__title content__title__glitch" data-text="Unreal Engine Materials">Unreal Engine Materials</h1>
         <div class="cardview__list">
-            <app-cardview [model]="cardviewUEDragonModel"></app-cardview>
-            <app-cardview [model]="cardviewUEVolumetricIceModel"></app-cardview>
-            <app-cardview [model]="cardviewUEGlitterBallModel"></app-cardview>
-            <app-cardview [model]="cardviewUEMagicSphereModel"></app-cardview>
-            <app-cardview [model]="cardviewUESlimeModel"></app-cardview>
-            <app-cardview [model]="cardviewUEGlassModel"></app-cardview>
-            <app-cardview [model]="cardviewUEBubbleModel"></app-cardview>
-            <app-cardview [model]="cardviewUESunModel"></app-cardview>
-            <app-cardview [model]="cardviewUEScreenModel"></app-cardview>
+            <app-cardview *ngFor="let model of listMaterials" [model]="model"></app-cardview>
         </div>
     </div>
 
-    
+    <!-- MOTION GRAPHICS & INFINITE LOOPS -->
+    <div class = "content__section">
+        <h1 class = "content__title content__title__glitch" data-text="Motion Graphics">Motion Graphics</h1>
+        <div class="cardview__list">
+            <app-cardview *ngFor="let model of listMotionGraphics" [model]="model"></app-cardview>
+        </div>
+    </div>
+
 </div>

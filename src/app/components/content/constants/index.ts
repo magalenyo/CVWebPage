@@ -1,44 +1,37 @@
-import { ProjectUrls, UEMaterialsUrls } from "src/app/constants/app.constants"
+import { MotionGraphicsUrls, ProjectUrls, UEMaterialsUrls } from "src/app/constants/app.constants"
 import { CardviewModel } from "../../shared/cardview/model/cardview.model"
 
 /// PROJECTS
 
-export const cardviewBoundeadModel : CardviewModel = {
+const cardviewBoundeadModel : CardviewModel = {
     title: "Boundead",
     description: "Action/Platform game made in Unity for Bachelor's degree final project",
     backgroundImage: "assets/images/carousel-boundead/1.png",
     url: "/projects/" + ProjectUrls.BOUNDEAD
 }
 
-export const cardviewRealDisunityModel : CardviewModel = {
+const cardviewRealDisunityModel : CardviewModel = {
     title: "Real Disunity Engine",
     description: "Basic C++ OpenGL Game Engine from scratch",
     backgroundImage: "assets/images/engines/RealDisunityEngine/RealDisunity1.png",
     url: "/projects/" + ProjectUrls.REAL_DISUNITY
 }
 
-export const cardviewTesseractModel : CardviewModel = {
+const cardviewTesseractModel : CardviewModel = {
     title: "Tesseract Engine",
     description: "Advanced C++ OpenGL Game Engine from scratch",
     backgroundImage: "assets/images/engines/TesseractEngine/tesseract.png",
     url: "/projects/" + ProjectUrls.TESSERACT
 }
 
-export const cardviewShutdownModel : CardviewModel = {
+const cardviewShutdownModel : CardviewModel = {
     title: "Shutdown Videogame",
     description: "Top down shooter video game made with own engine",
     backgroundImage: "assets/images/cards/shutdown.png",
     url: "/projects/" + ProjectUrls.SHUTDOWN
 }
 
-export const cardviewUEMaterialsModel: CardviewModel = {
-    title: "Unreal Engine Materials",
-    description: "descrtiption",
-    backgroundImage: "assets/images/carousel-boundead/1.png",
-    url: "/projects/" + ProjectUrls.UNREAL_ENGINE_MATERIALS
-}
-
-export const cardviewNodeExpressApiModel: CardviewModel = {
+const cardviewNodeExpressApiModel: CardviewModel = {
     title: "Node Express API Rest",
     description: "Node+Express API Rest connected to MongoDB",
     backgroundImage: "assets/images/node/node.png",
@@ -47,7 +40,7 @@ export const cardviewNodeExpressApiModel: CardviewModel = {
 
 // UNREAL ENGINE
 
-export const cardviewUEDragonModel: CardviewModel = {
+const cardviewUEDragonModel: CardviewModel = {
     title: "Dragon",
     description: "",
     backgroundImage: "https://pouch.jumpshare.com/preview/hvrejRbuzf47-DW8jlmBE9BTukFc51wM4cXLsAGuzwvRjBqoVQfIfwFqSATifUxBTVAGIWkwYDLZ2vhxBaWyLBA1jQB_zmxltR5bgJ1-nls",
@@ -55,7 +48,7 @@ export const cardviewUEDragonModel: CardviewModel = {
     material: true
 }
 
-export const cardviewUEVolumetricIceModel: CardviewModel = {
+const cardviewUEVolumetricIceModel: CardviewModel = {
     title: "Volumetric Ice",
     description: "",
     backgroundImage: "https://i.gyazo.com/d5cd2fe1dc6111340374992f3188cc39.gif",
@@ -63,7 +56,7 @@ export const cardviewUEVolumetricIceModel: CardviewModel = {
     material: true
 }
 
-export const cardviewUEGlitterBallModel: CardviewModel = {
+const cardviewUEGlitterBallModel: CardviewModel = {
     title: "Glitter Ball",
     description: "",
     backgroundImage: "https://i.gyazo.com/b2ff49f694c79ecf2dae76f69de96321.gif",
@@ -71,7 +64,7 @@ export const cardviewUEGlitterBallModel: CardviewModel = {
     material: true
 }
 
-export const cardviewUEMagicSphereModel: CardviewModel = {
+const cardviewUEMagicSphereModel: CardviewModel = {
     title: "Magic Sphere",
     description: "",
     backgroundImage: "https://i.gyazo.com/c288e214a26710695a4e251c6ead20a9.gif",
@@ -79,7 +72,7 @@ export const cardviewUEMagicSphereModel: CardviewModel = {
     material: true
 }
 
-export const cardviewUESlimeModel: CardviewModel = {
+const cardviewUESlimeModel: CardviewModel = {
     title: "Slime",
     description: "",
     backgroundImage: "https://i.gyazo.com/7cf85a924acbafc2c7cfa32f2ef3cd40.gif",
@@ -87,7 +80,7 @@ export const cardviewUESlimeModel: CardviewModel = {
     material: true
 }
 
-export const cardviewUEGlassModel: CardviewModel = {
+const cardviewUEGlassModel: CardviewModel = {
     title: "Glass",
     description: "",
     backgroundImage: "https://i.gyazo.com/e13dbb2b36a4be0c9df2c4ffb298a1ff.gif",
@@ -95,7 +88,7 @@ export const cardviewUEGlassModel: CardviewModel = {
     material: true
 }
 
-export const cardviewUEBubbleModel: CardviewModel = {
+const cardviewUEBubbleModel: CardviewModel = {
     title: "Bubble",
     description: "",
     backgroundImage: "https://i.gyazo.com/82ef2f0e824fdef4fb5b62e5cc809141.gif",
@@ -103,7 +96,7 @@ export const cardviewUEBubbleModel: CardviewModel = {
     material: true
 }
 
-export const cardviewUESunModel: CardviewModel = {
+const cardviewUESunModel: CardviewModel = {
     title: "Sun",
     description: "",
     backgroundImage: "https://i.gyazo.com/fe9657c42421d6385b5d08659f432a78.gif",
@@ -111,10 +104,53 @@ export const cardviewUESunModel: CardviewModel = {
     material: true
 }
 
-export const cardviewUEScreenModel: CardviewModel = {
+const cardviewUEScreenModel: CardviewModel = {
     title: "TV Screen",
     description: "",
     backgroundImage: "https://i.gyazo.com/dd27164d14239dc9f7031bd635e926e3.gif",
     url: "/projects/" + ProjectUrls.UNREAL_ENGINE_MATERIALS + "/" + UEMaterialsUrls.SCREEN,
     material: true
 }
+
+// Motion Graphics
+
+const cardviewMGRetro: CardviewModel = {
+    title: "Retro 80s",
+    description: "",
+    backgroundImage: "https://i.gyazo.com/dd27164d14239dc9f7031bd635e926e3.gif",
+    url: "/projects/" + ProjectUrls.MOTION_GRAPHICS + "/" + MotionGraphicsUrls.RETRO,
+    material: true
+}
+
+const cardviewMGCyber: CardviewModel = {
+    title: "Cyber Triangle",
+    description: "",
+    backgroundImage: "https://i.gyazo.com/dd27164d14239dc9f7031bd635e926e3.gif",
+    url: "/projects/" + ProjectUrls.MOTION_GRAPHICS + "/" + MotionGraphicsUrls.CYBER,
+    material: true
+}
+
+export const listProjects = [
+    cardviewBoundeadModel,
+    cardviewRealDisunityModel,
+    cardviewTesseractModel,
+    cardviewShutdownModel,
+    cardviewNodeExpressApiModel
+]
+
+export const listMaterials = [
+    cardviewUEDragonModel,
+    cardviewUEVolumetricIceModel,
+    cardviewUEGlitterBallModel,
+    cardviewUEMagicSphereModel,
+    cardviewUESlimeModel,
+    cardviewUEGlassModel,
+    cardviewUEBubbleModel,
+    cardviewUESunModel,
+    cardviewUEScreenModel
+]
+
+export const listMotionGraphics = [
+    cardviewMGRetro,
+    cardviewMGCyber
+]

@@ -9,8 +9,9 @@ export enum ProjectUrls {
     REAL_DISUNITY = 'real-disunity',
     TESSERACT = 'tesseract',
     SHUTDOWN = 'shutdown',
+    NODE_EXPRESS_API = 'node-express-api',
     UNREAL_ENGINE_MATERIALS = 'ue-materials',
-    NODE_EXPRESS_API = 'node-express-api'
+    MOTION_GRAPHICS = 'motion-graphics'
 }
 
 export enum UEMaterialsUrls {
@@ -23,4 +24,9 @@ export enum UEMaterialsUrls {
     BUBBLE = 'bubble',
     SUN = 'sun',
     SCREEN = 'screen'
+}
+
+export enum MotionGraphicsUrls {
+    RETRO = 'retro',
+    CYBER = 'cyber'
 }

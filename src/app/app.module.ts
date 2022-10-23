@@ -27,6 +27,9 @@ import { SunComponent } from './components/projects/unreal-engine-materials/sun/
 import { ScreenComponent } from './components/projects/unreal-engine-materials/screen/screen.component';
 import { GlitterComponent } from './components/projects/unreal-engine-materials/glitter/glitter.component';
 import { DragonComponent } from './components/projects/unreal-engine-materials/dragon/dragon.component';
+import { MotionGraphicsComponent } from './components/projects/motion-graphics/motion-graphics.component';
+import { CyberComponent } from './components/projects/motion-graphics/cyber/cyber.component';
+import { RetroComponent } from './components/projects/motion-graphics/retro/retro.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +49,10 @@ import { DragonComponent } from './components/projects/unreal-engine-materials/d
     SunComponent,
     ScreenComponent,
     GlitterComponent,
-    DragonComponent
+    DragonComponent,
+    MotionGraphicsComponent,
+    CyberComponent,
+    RetroComponent
   ],
   imports: [
     BrowserModule,

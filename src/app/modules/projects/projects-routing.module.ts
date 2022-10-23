@@ -1,6 +1,9 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { BoundeadComponent } from "src/app/components/projects/boundead/boundead.component";
+import { CyberComponent } from "src/app/components/projects/motion-graphics/cyber/cyber.component";
+import { MotionGraphicsComponent } from "src/app/components/projects/motion-graphics/motion-graphics.component";
+import { RetroComponent } from "src/app/components/projects/motion-graphics/retro/retro.component";
 import { NodeExpressApiComponent } from "src/app/components/projects/node-express-api/node-express-api.component";
 import { RealDisunityComponent } from "src/app/components/projects/real-disunity/real-disunity.component";
 import { ShutdownComponent } from "src/app/components/projects/shutdown/shutdown.component";
@@ -15,7 +18,7 @@ import { SlimeComponent } from "src/app/components/projects/unreal-engine-materi
 import { SunComponent } from "src/app/components/projects/unreal-engine-materials/sun/sun.component";
 import { UnrealEngineMaterialsComponent } from "src/app/components/projects/unreal-engine-materials/unreal-engine-materials.component";
 import { VolumetricIceComponent } from "src/app/components/projects/unreal-engine-materials/volumetric-ice/volumetric-ice.component";
-import { ProjectUrls, UEMaterialsUrls } from "src/app/constants/app.constants";
+import { MotionGraphicsUrls, ProjectUrls, UEMaterialsUrls } from "src/app/constants/app.constants";
 import { ProjectsComponent } from "./projects.component";
 
 export const routes: Routes = [
@@ -78,6 +81,20 @@ export const routes: Routes = [
                     { 
                         path: UEMaterialsUrls.SCREEN,
                         component: ScreenComponent
+                    },
+                ]
+            },
+            { 
+                path: ProjectUrls.MOTION_GRAPHICS,
+                component: MotionGraphicsComponent,
+                children: [
+                    { 
+                        path: MotionGraphicsUrls.CYBER,
+                        component: CyberComponent
+                    },
+                    { 
+                        path: MotionGraphicsUrls.RETRO,
+                        component: RetroComponent
                     },
                 ]
             },
