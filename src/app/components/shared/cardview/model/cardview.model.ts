@@ -3,5 +3,6 @@ export class CardviewModel {
     description: string;
     backgroundImage: string;
     url: string;
+    video?: boolean = false;
     material?: boolean = false;
 }

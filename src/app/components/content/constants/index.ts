@@ -43,9 +43,10 @@ const cardviewNodeExpressApiModel: CardviewModel = {
 const cardviewUEDragonModel: CardviewModel = {
     title: "Dragon",
     description: "",
-    backgroundImage: "https://pouch.jumpshare.com/preview/hvrejRbuzf47-DW8jlmBE9BTukFc51wM4cXLsAGuzwvRjBqoVQfIfwFqSATifUxBTVAGIWkwYDLZ2vhxBaWyLBA1jQB_zmxltR5bgJ1-nls",
+    backgroundImage: "assets/images/ue-materials/dragon/cardview.mp4",
     url: "/projects/" + ProjectUrls.UNREAL_ENGINE_MATERIALS + "/" + UEMaterialsUrls.DRAGON,
-    material: true
+    material: true,
+    video: true
 }
 
 const cardviewUEVolumetricIceModel: CardviewModel = {
@@ -107,9 +108,10 @@ const cardviewUESunModel: CardviewModel = {
 const cardviewUEScreenModel: CardviewModel = {
     title: "TV Screen",
     description: "",
-    backgroundImage: "https://i.gyazo.com/dd27164d14239dc9f7031bd635e926e3.gif",
+    backgroundImage: "assets/images/ue-materials/screen/cardview.mp4",
     url: "/projects/" + ProjectUrls.UNREAL_ENGINE_MATERIALS + "/" + UEMaterialsUrls.SCREEN,
-    material: true
+    material: true,
+    video: true
 }
 
 // Motion Graphics
@@ -117,17 +119,19 @@ const cardviewUEScreenModel: CardviewModel = {
 const cardviewMGRetro: CardviewModel = {
     title: "Retro 80s",
     description: "",
-    backgroundImage: "https://i.gyazo.com/dd27164d14239dc9f7031bd635e926e3.gif",
+    backgroundImage: "assets/videos/InfiniteLoops/ILRetro.mp4",
     url: "/projects/" + ProjectUrls.MOTION_GRAPHICS + "/" + MotionGraphicsUrls.RETRO,
-    material: true
+    material: true,
+    video: true
 }
 
 const cardviewMGCyber: CardviewModel = {
     title: "Cyber Triangle",
     description: "",
-    backgroundImage: "https://i.gyazo.com/dd27164d14239dc9f7031bd635e926e3.gif",
+    backgroundImage: "assets/videos/InfiniteLoops/ILTriangles.mp4",
     url: "/projects/" + ProjectUrls.MOTION_GRAPHICS + "/" + MotionGraphicsUrls.CYBER,
-    material: true
+    material: true,
+    video: true
 }
 
 export const listProjects = [

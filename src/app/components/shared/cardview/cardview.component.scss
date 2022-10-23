@@ -7,45 +7,27 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    // flex: 1 0 calc(33.33% - 10px);
-    //flex: 1 0 33%;
     flex: 0 0 calc(33% - 40px);
     margin: 20px;
 }
 
-// :host:nth-child(3n){
-//     margin-right: 0;
-// }
-
-// :host:nth-child(3n-2){
-//     margin-left: 0;
-// }
-
 .cardview{
     width: 200px;
     height: 400px;
-    // box-shadow: 0 1px 1px rgb(0 0 0 / 10%), 0 2px 2px rgb(0 0 0 / 10%), 0 4px 4px rgb(0 0 0 / 10%), 0 8px 8px rgb(0 0 0 / 10%), 0 16px 16px rgb(0 0 0 / 10%);
     position: relative;
     display: flex;
     align-items: flex-end;
     overflow: hidden;
-    // padding: 1rem;
     width: 100%;
     text-align: center;
     color: whitesmoke;
     background-color: whitesmoke;
     box-shadow: 0 1px 1px rgb(0 0 0 / 10%), 0 2px 2px rgb(0 0 0 / 10%), 0 4px 4px rgb(0 0 0 / 10%), 0 8px 8px rgb(0 0 0 / 10%), 0 16px 16px rgb(0 0 0 / 10%);
-    // background-image: url(https://images.unsplash.com/photo-1517021897933-0e0319cfbc28?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
     background-size: cover;
     background-position: center;
-    // transition-duration: 1s;
-    // transition:bottom 1s linear;
     cursor: pointer;
 
     &:hover {
-        // background-size: auto;
-        // animation: animatedBackground 10s linear infinite alternate;
-        // align-items:flex-start;
 
         .cardview__content{
             bottom: 50%;
@@ -57,12 +39,10 @@
     }
 }
 
-.cardview__img{
+.cardview__media{
     height: 100%;
     width: 100%;
     margin: auto;
-    /* overflow: hidden; */
-    /* flex-shrink: 0; */
     object-fit: cover;
 }
 
@@ -185,8 +165,6 @@ $breakpoint-phone: 452px;
         margin-left: 0;
         margin-right: 0;
     }
-
-    
   
 }
 
@@ -196,5 +174,3 @@ $breakpoint-phone: 452px;
   
 
 }
-
-///************** CONTENT ****************///
