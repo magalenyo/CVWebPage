@@ -13,6 +13,7 @@ import { DragonComponent } from "src/app/components/projects/unreal-engine-mater
 import { GlassComponent } from "src/app/components/projects/unreal-engine-materials/glass/glass.component";
 import { GlitterComponent } from "src/app/components/projects/unreal-engine-materials/glitter/glitter.component";
 import { MagicComponent } from "src/app/components/projects/unreal-engine-materials/magic/magic.component";
+import { MorphingComponent } from "src/app/components/projects/unreal-engine-materials/morphing/morphing.component";
 import { ScreenComponent } from "src/app/components/projects/unreal-engine-materials/screen/screen.component";
 import { SlimeComponent } from "src/app/components/projects/unreal-engine-materials/slime/slime.component";
 import { SunComponent } from "src/app/components/projects/unreal-engine-materials/sun/sun.component";
@@ -49,6 +50,10 @@ export const routes: Routes = [
                     { 
                         path: UEMaterialsUrls.DRAGON,
                         component: DragonComponent
+                    },
+                    { 
+                        path: UEMaterialsUrls.MORPHING,
+                        component: MorphingComponent
                     },
                     { 
                         path: UEMaterialsUrls.VOLUMETRIC_ICE,

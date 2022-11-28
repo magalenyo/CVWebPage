@@ -21,8 +21,6 @@ import { SharedModule } from 'src/app/components/shared/shared.module';
   ],
   imports: [
     CommonModule,
-    // FontAwesomeModule,
-    // MdbCarouselModule,
     HomeRoutingModule,
     SharedModule
   ]

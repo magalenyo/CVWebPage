@@ -30,6 +30,8 @@ import { DragonComponent } from './components/projects/unreal-engine-materials/d
 import { MotionGraphicsComponent } from './components/projects/motion-graphics/motion-graphics.component';
 import { CyberComponent } from './components/projects/motion-graphics/cyber/cyber.component';
 import { RetroComponent } from './components/projects/motion-graphics/retro/retro.component';
+import { MorphingComponent } from './components/projects/unreal-engine-materials/morphing/morphing.component';
+import { OtherUnrealEngineProjectsComponent } from './components/projects/other-unreal-engine-projects/other-unreal-engine-projects.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +54,9 @@ import { RetroComponent } from './components/projects/motion-graphics/retro/retr
     DragonComponent,
     MotionGraphicsComponent,
     CyberComponent,
-    RetroComponent
+    RetroComponent,
+    MorphingComponent,
+    OtherUnrealEngineProjectsComponent
   ],
   imports: [
     BrowserModule,

@@ -51,6 +51,15 @@ const cardviewUEDragonModel: CardviewModel = {
     video: true
 }
 
+const cardviewUEMorphing: CardviewModel = {
+    title: "Morphing",
+    description: "",
+    backgroundImage: assetsMaterials + "morphing/cardview.mp4",
+    url: "/projects/" + ProjectUrls.UNREAL_ENGINE_MATERIALS + "/" + UEMaterialsUrls.MORPHING,
+    material: true,
+    video: true
+}
+
 const cardviewUEVolumetricIceModel: CardviewModel = {
     title: "Volumetric Ice",
     description: "",
@@ -155,6 +164,7 @@ export const listProjects = [
 
 export const listMaterials = [
     cardviewUEDragonModel,
+    cardviewUEMorphing,
     cardviewUEVolumetricIceModel,
     cardviewUEGlitterBallModel,
     cardviewUEMagicSphereModel,
