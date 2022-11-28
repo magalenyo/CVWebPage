@@ -31,6 +31,13 @@ const cardviewShutdownModel : CardviewModel = {
     url: "/projects/" + ProjectUrls.SHUTDOWN
 }
 
+const cardviewOtherUnrealEngineProjectsModel : CardviewModel = {
+    title: "Other Unreal Engine Projects",
+    description: "",
+    backgroundImage: "assets/images/cards/other-unreal-engine-projects.png",
+    url: "/projects/" + ProjectUrls.OTHER_UNREAL_ENGINE_PROJECTS
+}
+
 const cardviewNodeExpressApiModel: CardviewModel = {
     title: "Node Express API Rest",
     description: "Node+Express API Rest connected to MongoDB",
@@ -159,6 +166,7 @@ export const listProjects = [
     cardviewRealDisunityModel,
     cardviewTesseractModel,
     cardviewShutdownModel,
+    cardviewOtherUnrealEngineProjectsModel,
     cardviewNodeExpressApiModel
 ]
 

@@ -5,6 +5,7 @@ import { CyberComponent } from "src/app/components/projects/motion-graphics/cybe
 import { MotionGraphicsComponent } from "src/app/components/projects/motion-graphics/motion-graphics.component";
 import { RetroComponent } from "src/app/components/projects/motion-graphics/retro/retro.component";
 import { NodeExpressApiComponent } from "src/app/components/projects/node-express-api/node-express-api.component";
+import { OtherUnrealEngineProjectsComponent } from "src/app/components/projects/other-unreal-engine-projects/other-unreal-engine-projects.component";
 import { RealDisunityComponent } from "src/app/components/projects/real-disunity/real-disunity.component";
 import { ShutdownComponent } from "src/app/components/projects/shutdown/shutdown.component";
 import { TesseractComponent } from "src/app/components/projects/tesseract/tesseract.component";
@@ -42,6 +43,10 @@ export const routes: Routes = [
             { 
                 path: ProjectUrls.SHUTDOWN,
                 component: ShutdownComponent
+            },
+            { 
+                path: ProjectUrls.OTHER_UNREAL_ENGINE_PROJECTS,
+                component: OtherUnrealEngineProjectsComponent
             },
             { 
                 path: ProjectUrls.UNREAL_ENGINE_MATERIALS,

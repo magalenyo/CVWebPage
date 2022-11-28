@@ -49,6 +49,20 @@ body {
   margin: 24px 0 50px 0;
 }
 
+.content__section--mini{
+  margin: 24px 0;
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    font-weight: bold;
+  }
+
+  .videoWrapper{
+    margin: 18px auto;
+  }
+}
+
 $secondaryColor: #0c0c0e;
 $steps: 28;
 $starting-steps: 8;
