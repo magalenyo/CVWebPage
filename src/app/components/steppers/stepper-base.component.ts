@@ -16,8 +16,6 @@ export class StepperBaseComponent implements OnInit {
   }
 
   ngAfterViewInit(): void {
-    // this.currentlyOpen = $('.step')[0];
-
     this.elem.nativeElement.querySelectorAll('.step').forEach(element => {
       element.addEventListener('click', (e) => {
         const thisObject = e.currentTarget;
@@ -43,7 +41,5 @@ export class StepperBaseComponent implements OnInit {
       })
     });
   }
-
-  
 
 }
