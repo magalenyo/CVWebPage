@@ -5,6 +5,6 @@
     </video>
     <div class="cardview__content">
         <h2 class="cardview__title">{{ model.title }}</h2>
-        <p class="cardview__description">{{ model.description }}</p>
+        <p *ngIf="model.description" class="cardview__description">{{ model.description }}</p>
     </div>
 </div>

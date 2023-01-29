@@ -26,7 +26,7 @@ const cardviewTesseractModel : CardviewModel = {
 
 const cardviewShutdownModel : CardviewModel = {
     title: "Shutdown Videogame",
-    description: "Top down shooter video game made with own engine",
+    description: "Top down shooter video game made with our own engine",
     backgroundImage: "assets/videos/cards/shutdown-trimmed-2.mp4",
     url: "/projects/" + ProjectUrls.SHUTDOWN,
     material: true,
@@ -34,8 +34,8 @@ const cardviewShutdownModel : CardviewModel = {
 }
 
 const cardviewOtherUnrealEngineProjectsModel : CardviewModel = {
-    title: "Other Unreal Engine Projects",
-    description: "",
+    title: "Unreal Engine 5 Projects",
+    description: "UE5 projects made in C++",
     backgroundImage: "assets/videos/cards/simple-shooter-trimmed.mp4",
     url: "/projects/" + ProjectUrls.OTHER_UNREAL_ENGINE_PROJECTS,
     material: true,
