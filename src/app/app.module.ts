@@ -32,6 +32,7 @@ import { CyberComponent } from './components/projects/motion-graphics/cyber/cybe
 import { RetroComponent } from './components/projects/motion-graphics/retro/retro.component';
 import { MorphingComponent } from './components/projects/unreal-engine-materials/morphing/morphing.component';
 import { OtherUnrealEngineProjectsComponent } from './components/projects/other-unreal-engine-projects/other-unreal-engine-projects.component';
+import { ReturnalUnrealEngineComponent } from './components/projects/returnal-unreal-engine/returnal-unreal-engine.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { OtherUnrealEngineProjectsComponent } from './components/projects/other-
     CyberComponent,
     RetroComponent,
     MorphingComponent,
-    OtherUnrealEngineProjectsComponent
+    OtherUnrealEngineProjectsComponent,
+    ReturnalUnrealEngineComponent
   ],
   imports: [
     BrowserModule,

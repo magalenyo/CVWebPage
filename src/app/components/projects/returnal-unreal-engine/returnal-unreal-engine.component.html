@@ -1,0 +1,31 @@
+<div class = "content__section">
+    <h1 class = "content__title content__title__glitch" data-text="Housemarque's Returnal in Unreal Engine 5">Housemarque's Returnal in Unreal Engine 5</h1>
+    <div class = "content__wrapper">
+        <p class = "content__text">This project is an attempt to recreate some of the bosses from <b>Returnal</b>, a third-person action shooter that was a PS5 launch exclusive developed by Housemarque.</p>
+        <p class = "content__text">Since behavior trees have become the industry standard for AI behaviors, I will be implementing the enemies' AI with BTs instead of a more traditional programming.</p>
+        
+        <div class = "content__section--mini">
+            <h2>Ixion (2nd boss)</h2>
+            <p class = "content__text">This boss has different stages, it first starts grounded, but then immediately flys off to the sky and the game loop starts.</p>
+            <h3>Stage 1</h3>
+            <p class = "content__text">In the first stage it will be able to perform the following actions:</p>
+            <ul class = "content__list">
+                <li>Fly to: flies to a target location above the ground.</li>
+                <li>Exit attack (Basic Attack): perform a 360 degree burst of bullets that decelerate drastically using a curve.</li>
+                <li>Machine gun attack (Basic Attack): shoots to a predicted position of where the player will go to, with a certain spread behavior.</li>
+                <li>Burst attack (Basic Attack): shoots towards the player in a cone.</li>
+                <li>Vortex attack (Heavy Attack): it shoots a cone of bullets towards the player making a beautiful pattern.</li>
+            </ul>
+            <p class = "content__text">The exit attack will always be performed before it moves to a different location.</p>
+
+            <div class="videoWrapper">
+                <iframe class = "youtubeVideo" src="https://www.youtube.com/embed/TG0Axq1YqVo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <p class = "content__text">Behavior Tree Stage 1</p>
+            <img src="assets/images/projects/returnal/bt_ixion_phase_1.png">
+        </div>
+
+        <a class = "content__link" target="_blank" href="https://github.com/magalenyo/UE5-BulletHell">Housemarque's Returnal Unreal Engine 5</a>
+
+    </div>
+</div>

@@ -22,6 +22,7 @@ import { UnrealEngineMaterialsComponent } from "src/app/components/projects/unre
 import { VolumetricIceComponent } from "src/app/components/projects/unreal-engine-materials/volumetric-ice/volumetric-ice.component";
 import { MotionGraphicsUrls, ProjectUrls, UEMaterialsUrls } from "src/app/constants/app.constants";
 import { ProjectsComponent } from "./projects.component";
+import { ReturnalUnrealEngineComponent } from "src/app/components/projects/returnal-unreal-engine/returnal-unreal-engine.component";
 
 export const routes: Routes = [
     {
@@ -43,6 +44,10 @@ export const routes: Routes = [
             { 
                 path: ProjectUrls.SHUTDOWN,
                 component: ShutdownComponent
+            },
+            {
+                path: ProjectUrls.RETURNAL_UNREAL_ENGINE,
+                component: ReturnalUnrealEngineComponent
             },
             { 
                 path: ProjectUrls.OTHER_UNREAL_ENGINE_PROJECTS,

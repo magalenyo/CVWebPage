@@ -9,6 +9,7 @@ export enum ProjectUrls {
     REAL_DISUNITY = 'real-disunity',
     TESSERACT = 'tesseract',
     SHUTDOWN = 'shutdown',
+    RETURNAL_UNREAL_ENGINE = 'returnal-unreal-engine',
     OTHER_UNREAL_ENGINE_PROJECTS = 'other-unreal-engine-projects',
     NODE_EXPRESS_API = 'node-express-api',
     UNREAL_ENGINE_MATERIALS = 'ue-materials',

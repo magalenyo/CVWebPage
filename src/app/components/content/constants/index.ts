@@ -33,6 +33,15 @@ const cardviewShutdownModel : CardviewModel = {
     video: true
 }
 
+const cardviewReturnalUnrealEngineProjectsModel : CardviewModel = {
+    title: "PS5 Returnal in UE5",
+    description: "Made in Unreal Engine 5 in C++",
+    backgroundImage: "assets/videos/cards/returnal-ue-trimmed.mp4",
+    url: "/projects/" + ProjectUrls.RETURNAL_UNREAL_ENGINE,
+    material: true,
+    video: true
+}
+
 const cardviewOtherUnrealEngineProjectsModel : CardviewModel = {
     title: "Unreal Engine 5 Projects",
     description: "UE5 projects made in C++",
@@ -170,6 +179,7 @@ export const listProjects = [
     cardviewRealDisunityModel,
     cardviewTesseractModel,
     cardviewShutdownModel,
+    cardviewReturnalUnrealEngineProjectsModel,
     cardviewOtherUnrealEngineProjectsModel,
     cardviewNodeExpressApiModel
 ]
