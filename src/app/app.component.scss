@@ -32,6 +32,10 @@ body {
   border-radius: 10px;
 }
 
+img {
+  margin: 16px 0;
+}
+
 ///************** CONTENT ****************///
 
 .content__body {
@@ -364,7 +368,7 @@ ul > p {
 
   position: relative;
   display: flex;
-  width: 60%;
+  width: 80%;
   margin: 16px auto;
 
   & > img {

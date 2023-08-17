@@ -1,42 +1,89 @@
 <div class = "content__section">
     <h1 class = "content__title content__title__glitch" data-text="Housemarque's Returnal in Unreal Engine 5">Housemarque's Returnal in Unreal Engine 5</h1>
     <div class = "content__wrapper">
-        <p class = "content__text">This project is an attempt to recreate some of the bosses from <b>Returnal</b>, a third-person action shooter that was a PS5 launch exclusive developed by Housemarque.</p>
+        <p class = "content__text">This project is an attempt to recreate in Unreal Engine 5 and C++ some of the bosses from <b>Returnal</b>, a third-person action shooter that was a PS5 launch exclusive developed by Housemarque.</p>
         <p class = "content__text">Since behavior trees have become the industry standard for AI behaviors, I will be implementing the enemies' AI with BTs instead of more traditional programming.</p>
 
         <a class = "content__link" target="_blank" href="https://github.com/magalenyo/UE5-BulletHell">Housemarque's Returnal Unreal Engine 5</a>
 
-        
         <div class = "content__section--mini">
             <h2>Ixion (2nd boss)</h2>
-            <p class = "content__text">This boss has different stages; it first starts grounded, but then immediately flies off into the sky, and the game loop starts.</p>
-            <h3>Stage 1</h3>
-            <p class = "content__text">In the first stage it will be able to perform the following actions:</p>
-            <ul class = "content__list">
-                <li>Fly to: flies to a target location above the ground.</li>
-                <li>Exit attack (Basic Attack): perform a 360 degree burst of bullets that decelerate drastically using a curve.</li>
-                <li>Machine gun attack (basic attack): shoots to a predicted position of where the player will go, with a certain spread behavior.</li>
-                <li>Burst attack (Basic Attack): shoots towards the player in a cone.</li>
-                <li>Vortex attack (Heavy Attack): it shoots a cone of bullets towards the player, making a beautiful pattern.</li>
-            </ul>
-            <p class = "content__text">The exit attack will always be performed before it moves to a different location.</p>
-
+            <p class = "content__text">This boss has 3 different phases; it first starts grounded, but then immediately flies off to the sky, and the game loop starts, firing different bullet patterns and attacks. Each phase adds a level of difficulty by adding new complex attacks.</p>
+            <p class = "content__text">Phase 1 and Phase 2 are done, but I'm not going to implement Phase 3 for the lack of animations. I'm looking forward to implement Hyperion in the future, but for now this is it.</p>
+            <p class = "content__text">This boss has different phases; it first starts grounded, but then immediately flies off to the sky, and the game loop starts, firing different bullet patterns and attacks.</p>
+            
+            <h3>Full Gameplay</h3>
             <div class="videoWrapper">
-                <iframe class = "youtubeVideo" src="https://www.youtube.com/embed/y0GLFrA8OWM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe class = "youtubeVideo" src="https://www.youtube.com/embed/GBGyvQ0MmYU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            
+            <h3>Shorter version to display attacks only</h3>
+            <div class="videoWrapper">
+                <iframe class = "youtubeVideo" src="https://www.youtube.com/embed/R4kpB3jB7HE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
 
-            <p class = "content__text">General Behavior Tree</p>
-            <img src="assets/images/projects/returnal/bt_ixion_general.png">
+            
+            <div class = "content__section--mini">
+                <h3>Behavior Tree Root</h3>
+                <p class = "content__text">In order to have the different phases organized, I have created a <b>Behavior Tree</b> root with the common logic, a subtree for phase 1, and another subtree for the phase 2.</p>
+                <p class = "content__text">The root contains the logic to initialize the behavior tree and select the subtree by the current phase.</p>
+                <img src="assets/images/projects/returnal/bt_ixion_general.png">
+            </div>
 
-            <p class = "content__text">Behavior Tree Stage 1</p>
-            <img src="assets/images/projects/returnal/bt_ixion_phase_1.png">
+            <div class = "content__section--mini">
+                <h3>Phase 1</h3>
+                <p class = "content__text">In this phase, Ixion will be able to perform the following actions:</p>
+                <ul class = "content__list">
+                    <li>Fly to: flies to a target location above the ground.</li>
+                    <li>Exit attack (Basic Attack): perform a 360 degree burst of bullets that decelerate drastically using a curve.</li>
+                    <li>Machine gun attack (basic attack): shoots to a predicted position of where the player will go, with a certain spread behavior.</li>
+                    <li>Burst attack (Basic Attack): shoots towards the player in a cone.</li>
+                    <li>Vortex attack (Heavy Attack): it shoots a cone of bullets towards the player, making a beautiful pattern.</li>
+                </ul>
+                <p class = "content__text">The exit attack will always be performed before it moves to a different location.</p>
 
-            <h3>Stage 2 (Still WIP)</h3>
-            <p class = "content__text">In this stage, Ixion will drop down to the floor, performing an animation, and fly off to the sky at high speed. Then he drops in the middle of the arena and emit a shockwave at ground level.</p>
-            <p class = "content__text">After a short time, he will start emitting shockwaves that grow over time, followed by waves of bullets at a ground level, and emitting a burst of projectiles on the top of its head.</p>
+                <img src="assets/images/projects/returnal/bt_ixion_phase_1.png">
+            </div>
 
-            <p class = "content__text">Behavior Tree Stage 2</p>
-            <img src="assets/images/projects/returnal/bt_ixion_phase_2.png">
+            <div class = "content__section--mini">
+                <h3>Phase 2</h3>
+                <p class = "content__text">This Behavior Tree is separated in two main branches: the first branch where it performs the actions of the phase change, and the second branch which controls the game loop. The second branch will be executed once all tasks on the first branch have been completed.</p>
+                <img src="assets/images/projects/returnal/bt_ixion_phase_2.png">
+                
+                <h4>Phase Initialization</h4>
+                <p class = "content__text">In this initialization phase, Ixion will drop down to the floor, performing an animation, and fly off to the sky at high speed. Then he drops in the middle of the arena emitting a shockwave at a ground level.</p>
+                <p class = "content__text">After a short time, he starts emitting shockwaves that grow over time, followed by waves of bullets at a ground level, and emitting a burst of projectiles on the top of its head. Once he has performed this last sequence 4 times, it will start the game loop of the second phase.</p>
+                <ul class = "content__list">
+                    <li>Drop: shoots a ray facing the ground and drops to that position.</li>
+                    <li>Add offset position: adds an offset to the blackboard key selected. Should be the TargetLocation in order to fly to a high point in the sky, but from the current position of the boss.</li>
+                    <li>Set blackboard vector: sets a vector to the selected blackboard key. In this case sets a position in the center of the arena, but at a high altitude.</li>
+                    <li>Shockwave (Basic Attack): creates a simple shockwave that grows over time only in the x and y axis (it doesn't grow in height).</li>
+                    <li>Shockwave Bullets (Heavy Attack): it's an attack that is repeated 4 times and it's composed by three different things:
+                        <ul>
+                            <li>Shockwave: that grows over time in all axis.</li>
+                            <li>Bullets waves: 2 waves of bullets are fired in a 360 angle around the the boss. It moves in the x and y axis.</li>
+                            <li>Burst: a series of bullets are randomly fired outwards in a sphere around the boss. It mvoes in the x, y and z axis.</li>
+                        </ul>
+                    </li>
+                    <li>Descend rush (Heavy Attack): once the boss is high in the sky, it follows a spline in a descendant direction, and fires two shockwaves that move sideways, and also creates a vortex attack facing the direction of the boss.</li>
+                </ul>
+                <img src="assets/images/projects/returnal/bt_ixion_phase_2_1.png">
+
+                <h4>Game Loop</h4>
+                <p class = "content__text">This branch is responsible for the game loop of the boss. It will always make the boss move to a position, firing an exit attack on movement, and then selecting an attack randomly. A number is generated in the "Random Chance Number" service, and then each attack has a decorator that checks whether if the random number is inside the chance range to be fired.</p>
+                <p class = "content__text">The attacks in this branch are more complex because they are a combination of basic and heavy attacks at the same time.</p>
+
+                <ul class = "content__list">
+                    <li>Machine Gun + Burst: it performs both attacks.</li>
+                    <li>Burst + Vortex: it performs both attacks.</li>
+                    <li>Sweep (Basic Attack): it flies to a random location outside the arena, and then it fires a wave of bullets going from left to right and vice versa several times. Each wave of bullets contains 4 rows of projectiles, and additionally random projectiles can be generated. </li>
+                    <li>Burst + Burst: it performs two waves of burst</li>
+                    <li>Laser and homing projectiles: it first fires a laser starting at the boss up to a distance, rotating from bottom to top, and facing the player. Once the laser has finished, it fires a series or projectiles that home on the player. This attack is repeated twice.</li>
+                    <li>Descend rush: it performs this attack 3 times.</li>
+                </ul>
+                <img src="assets/images/projects/returnal/bt_ixion_phase_2_2.png">
+
+            </div>
         </div>
 
         <p class = "content__text">I also created a small material for the bullets, but I won't be using it in the mechanics videos for clarity reasons.</p>
