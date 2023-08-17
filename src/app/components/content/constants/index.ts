@@ -26,7 +26,7 @@ const cardviewTesseractModel : CardviewModel = {
 
 const cardviewShutdownModel : CardviewModel = {
     title: "Shutdown Videogame",
-    description: "Top down shooter video game made with our own engine",
+    description: "Top down shooter video game made with our own engine made from scratch with C++",
     backgroundImage: "assets/videos/cards/shutdown-trimmed-2.mp4",
     url: "/projects/" + ProjectUrls.SHUTDOWN,
     material: true,
@@ -34,7 +34,7 @@ const cardviewShutdownModel : CardviewModel = {
 }
 
 const cardviewReturnalUnrealEngineProjectsModel : CardviewModel = {
-    title: "PS5 Returnal in UE5",
+    title: "PS5 Housemarque's Returnal in UE5",
     description: "Made in Unreal Engine 5 in C++",
     backgroundImage: "assets/videos/cards/returnal-ue-trimmed.mp4",
     url: "/projects/" + ProjectUrls.RETURNAL_UNREAL_ENGINE,
@@ -179,8 +179,8 @@ export const listProjects = [
     cardviewReturnalUnrealEngineProjectsModel,
     cardviewOtherUnrealEngineProjectsModel,
     cardviewBoundeadModel,
-    cardviewRealDisunityModel,
     cardviewTesseractModel,
+    cardviewRealDisunityModel,
     cardviewNodeExpressApiModel
 ]
 
