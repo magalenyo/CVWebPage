@@ -3,7 +3,7 @@
 <div id = "content" class = "content__body">
 
     <!-- ABOUT ME -->
-    <div class = "content__section">
+    <div class = "content__section" id="aboutme">
         <h1 class = "content__title content__title__glitch" data-text="About me">About me</h1>
 
         <div class = "content__bio__wrapper">
@@ -28,7 +28,7 @@
     </div>
 
     <!-- PROJECTS -->
-    <div class = "content__section">
+    <div class = "content__section" id="projects">
         <h1 class = "content__title content__title__glitch" data-text="Projects">Projects</h1>
         <div class="cardview__list">
             <app-cardview *ngFor="let model of listProjects" [model]="model"></app-cardview>
@@ -36,7 +36,7 @@
     </div>
 
     <!-- UNREAL ENGINE MATERIALS -->
-    <div class = "content__section">
+    <div class = "content__section" id="materials">
         <h1 class = "content__title content__title__glitch" data-text="Unreal Engine Materials">Unreal Engine Materials</h1>
         <div class="cardview__list">
             <app-cardview *ngFor="let model of listMaterials" [model]="model"></app-cardview>
@@ -44,7 +44,7 @@
     </div>
 
     <!-- MOTION GRAPHICS & INFINITE LOOPS -->
-    <div class = "content__section">
+    <div class = "content__section" id="mographics">
         <h1 class = "content__title content__title__glitch" data-text="Motion Graphics">Motion Graphics</h1>
         <div class="cardview__list">
             <app-cardview *ngFor="let model of listMotionGraphics" [model]="model"></app-cardview>
@@ -52,7 +52,7 @@
     </div>
 
     <!-- EDUCATION -->
-    <div class = "content__section">
+    <div class = "content__section" id="education">
         <h1 class = "content__title content__title__glitch" data-text="Education">Education</h1>
         <div class = "content__wrapper">
             <p class = "content__text">I have always been interested in computers, specially videogames and hardware, and the reason I got into the degree was to end up being a video games programmer, but ended up loving any kind of software development.</p>
@@ -64,7 +64,7 @@
     </div>
 
     <!-- EXPERIENCE -->
-    <div class = "content__section">
+    <div class = "content__section" id="experience">
         <h1 class = "content__title content__title__glitch" data-text="Experience">Experience</h1>
         <div class = "content__wrapper">
             <p class = "content__text">From restaurants to clothing companies, I have always been working to afford my education and needs. It wasn't until I graduated from Computer Engineering that I started my professional career in the IT sector.</p>
