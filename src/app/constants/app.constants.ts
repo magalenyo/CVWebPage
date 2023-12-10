@@ -10,6 +10,7 @@ export enum ProjectUrls {
     TESSERACT = 'tesseract',
     SHUTDOWN = 'shutdown',
     RETURNAL_UNREAL_ENGINE = 'returnal-unreal-engine',
+    BULLET_HEAVEN_UNREAL_ENGINE = 'bullet-heaven-unreal-engine',
     OTHER_UNREAL_ENGINE_PROJECTS = 'other-unreal-engine-projects',
     NODE_EXPRESS_API = 'node-express-api',
     UNREAL_ENGINE_MATERIALS = 'ue-materials',

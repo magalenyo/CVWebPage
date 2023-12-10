@@ -33,6 +33,7 @@ import { RetroComponent } from './components/projects/motion-graphics/retro/retr
 import { MorphingComponent } from './components/projects/unreal-engine-materials/morphing/morphing.component';
 import { OtherUnrealEngineProjectsComponent } from './components/projects/other-unreal-engine-projects/other-unreal-engine-projects.component';
 import { ReturnalUnrealEngineComponent } from './components/projects/returnal-unreal-engine/returnal-unreal-engine.component';
+import { BulletHeavenUnrealEngineComponent } from './components/projects/bullet-heaven-unreal-engine/bullet-heaven-unreal-engine.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { ReturnalUnrealEngineComponent } from './components/projects/returnal-un
     RetroComponent,
     MorphingComponent,
     OtherUnrealEngineProjectsComponent,
-    ReturnalUnrealEngineComponent
+    ReturnalUnrealEngineComponent,
+    BulletHeavenUnrealEngineComponent
   ],
   imports: [
     BrowserModule,

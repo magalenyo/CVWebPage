@@ -1,12 +1,14 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { BoundeadComponent } from "src/app/components/projects/boundead/boundead.component";
+import { BulletHeavenUnrealEngineComponent } from "src/app/components/projects/bullet-heaven-unreal-engine/bullet-heaven-unreal-engine.component";
 import { CyberComponent } from "src/app/components/projects/motion-graphics/cyber/cyber.component";
 import { MotionGraphicsComponent } from "src/app/components/projects/motion-graphics/motion-graphics.component";
 import { RetroComponent } from "src/app/components/projects/motion-graphics/retro/retro.component";
 import { NodeExpressApiComponent } from "src/app/components/projects/node-express-api/node-express-api.component";
 import { OtherUnrealEngineProjectsComponent } from "src/app/components/projects/other-unreal-engine-projects/other-unreal-engine-projects.component";
 import { RealDisunityComponent } from "src/app/components/projects/real-disunity/real-disunity.component";
+import { ReturnalUnrealEngineComponent } from "src/app/components/projects/returnal-unreal-engine/returnal-unreal-engine.component";
 import { ShutdownComponent } from "src/app/components/projects/shutdown/shutdown.component";
 import { TesseractComponent } from "src/app/components/projects/tesseract/tesseract.component";
 import { BubbleComponent } from "src/app/components/projects/unreal-engine-materials/bubble/bubble.component";
@@ -22,7 +24,6 @@ import { UnrealEngineMaterialsComponent } from "src/app/components/projects/unre
 import { VolumetricIceComponent } from "src/app/components/projects/unreal-engine-materials/volumetric-ice/volumetric-ice.component";
 import { MotionGraphicsUrls, ProjectUrls, UEMaterialsUrls } from "src/app/constants/app.constants";
 import { ProjectsComponent } from "./projects.component";
-import { ReturnalUnrealEngineComponent } from "src/app/components/projects/returnal-unreal-engine/returnal-unreal-engine.component";
 
 export const routes: Routes = [
     {
@@ -48,6 +49,10 @@ export const routes: Routes = [
             {
                 path: ProjectUrls.RETURNAL_UNREAL_ENGINE,
                 component: ReturnalUnrealEngineComponent
+            },
+            {
+                path: ProjectUrls.BULLET_HEAVEN_UNREAL_ENGINE,
+                component: BulletHeavenUnrealEngineComponent
             },
             { 
                 path: ProjectUrls.OTHER_UNREAL_ENGINE_PROJECTS,

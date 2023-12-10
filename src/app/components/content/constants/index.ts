@@ -35,9 +35,18 @@ const cardviewShutdownModel : CardviewModel = {
 
 const cardviewReturnalUnrealEngineProjectsModel : CardviewModel = {
     title: "PS5 Housemarque's Returnal in UE5",
-    description: "Made in Unreal Engine 5 in C++",
+    description: "Bullet Hell made in Unreal Engine 5 and C++",
     backgroundImage: "assets/videos/cards/returnal-ue-trimmed.mp4",
     url: "/projects/" + ProjectUrls.RETURNAL_UNREAL_ENGINE,
+    material: true,
+    video: true
+}
+
+const cardviewBulletHeavenlUnrealEngineProjectsModel : CardviewModel = {
+    title: "Bullet Heaven Devlog",
+    description: "Made in Unreal Engine 5 and C++",
+    backgroundImage: "assets/videos/cards/bullet-heaven-trimmed.mp4",
+    url: "/projects/" + ProjectUrls.BULLET_HEAVEN_UNREAL_ENGINE,
     material: true,
     video: true
 }
@@ -177,6 +186,7 @@ const cardviewMGCyber: CardviewModel = {
 export const listProjects = [
     cardviewShutdownModel,
     cardviewReturnalUnrealEngineProjectsModel,
+    cardviewBulletHeavenlUnrealEngineProjectsModel,
     cardviewOtherUnrealEngineProjectsModel,
     cardviewBoundeadModel,
     cardviewTesseractModel,
