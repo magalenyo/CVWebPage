@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class PresentationComponent implements OnInit {
 
   useVideo = true;
-  videoPlaybackRate = .8;
-  videoId = '#presentationVideo';
+  videoPlaybackRate = 1;
+  videoClass = '.presentation__video';
 
   constructor() { }
 
@@ -18,11 +18,13 @@ export class PresentationComponent implements OnInit {
 
   ngAfterViewInit(): void {
     if (this.useVideo) {
-      const video = (<HTMLVideoElement> document.querySelector(this.videoId));
-      if (video) {
-        video.playbackRate = this.videoPlaybackRate;
-        video.muted = true;
-        video.play();
+      const videos = document.querySelectorAll(this.videoClass);
+
+      if (videos) {
+        videos.forEach((video: HTMLVideoElement) => {
+          video.playbackRate = this.videoPlaybackRate;
+          video.muted = true;
+        })
       }
     }
   }
