@@ -1,7 +1,8 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { Router } from '@angular/router';
-
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import * as $ from "jquery";
+import { Subscription } from 'rxjs';
+import { filter } from 'rxjs/operators'; // Importing the filter operator
 import { AppUrls } from './constants/app.constants';
 
 
@@ -14,15 +15,39 @@ import { AppUrls } from './constants/app.constants';
 export class AppComponent implements OnInit {
 
   title = 'Miguel Ángel Bueno Rivera';
-  showFooter = true
+  showFooter = false;
+  private routerEventsSubscription: Subscription;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private route: ActivatedRoute) {
     $;    // to remove unused import
-    this.showFooter = router?.url !== AppUrls.EMPTY_HOME && router?.url !== AppUrls.HOME;
   }
 
   ngOnInit(): void {
     console.log("%cWhat are you looking at 👀?!", "color: green");
+  
+    // this.routerEventsSubscription = this.router.events.subscribe((event) => {
+    //   console.log(this.router)
+    //   if (event instanceof NavigationEnd) {
+    //     this.showFooter = this.router?.url !== AppUrls.EMPTY_HOME && this.router?.url !== AppUrls.HOME;
+    //   }
+    // })
+
+    this.routerEventsSubscription = this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe((event: NavigationEnd) => {
+      // Check the URL and set the flag accordingly
+      if (event.url !== AppUrls.EMPTY_HOME && event.url !== ("/" + AppUrls.HOME)) {
+        this.showFooter = true;
+      } else {
+        this.showFooter = false;
+      }
+      // this.showFooter = event?.url !== AppUrls.EMPTY_HOME || event?.url !== AppUrls.HOME;
+      console.log(this.showFooter);
+    });
+  }
+  
+  ngOnDestroy(): void {
+    this.routerEventsSubscription?.unsubscribe;
   }
 
 }
