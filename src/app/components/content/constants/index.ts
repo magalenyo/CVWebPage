@@ -6,8 +6,10 @@ import { CardviewModel } from "../../shared/cardview/model/cardview.model"
 const cardviewBoundeadModel : CardviewModel = {
     title: "Boundead",
     description: "Action/Platform game made in Unity for Bachelor's degree final project",
-    backgroundImage: "assets/images/carousel-boundead/1.png",
-    url: "/projects/" + ProjectUrls.BOUNDEAD
+    backgroundImage: "assets/videos/cards/boundead-trimmed.mp4",
+    url: "/projects/" + ProjectUrls.BOUNDEAD,
+    material: true,
+    video: true
 }
 
 const cardviewRealDisunityModel : CardviewModel = {
