@@ -1,10 +1,13 @@
 export enum AppUrls {
+    EMPTY_HOME = '/',
     HOME = 'home',
     PROJECTS = 'projects',
+    ABOUT = 'about',
     NOT_FOUND = '**'
 }
 
 export enum ProjectUrls {
+    HOME = '',
     BOUNDEAD = 'boundead',
     REAL_DISUNITY = 'real-disunity',
     TESSERACT = 'tesseract',

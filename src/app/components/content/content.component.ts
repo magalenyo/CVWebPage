@@ -1,8 +1,6 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
 
-import { faCalendarAlt, faEnvelope, faMapMarkerAlt, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 import { glitchMaxDelay, glitchTextClass, glitchTitleClass } from '../shared/cardview/constants';
-import { listMaterials, listMotionGraphics, listProjects } from './constants';
 
 @Component({
   selector: 'app-content',
@@ -11,14 +9,14 @@ import { listMaterials, listMotionGraphics, listProjects } from './constants';
 })
 export class ContentComponent implements OnInit {
   
-  public listProjects = listProjects;
-  public listMaterials = listMaterials;
-  public listMotionGraphics = listMotionGraphics;
+  // public listProjects = listProjects;
+  // public listMaterials = listMaterials;
+  // public listMotionGraphics = listMotionGraphics;
 
-  faCalendar = faCalendarAlt;
-  faMap = faMapMarkerAlt;
-  faMail = faEnvelope;
-  faPhone = faPhoneAlt;
+  // faCalendar = faCalendarAlt;
+  // faMap = faMapMarkerAlt;
+  // faMail = faEnvelope;
+  // faPhone = faPhoneAlt;
 
   constructor(private elem: ElementRef) { }
 

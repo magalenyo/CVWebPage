@@ -1,0 +1,23 @@
+<!-- PROJECTS -->
+<div class = "content__section" id="projects">
+    <h1 class = "content__title content__title__glitch" data-text="Projects">Projects</h1>
+    <div class="cardview__list">
+        <app-cardview *ngFor="let model of listProjects" [model]="model"></app-cardview>
+    </div>
+</div>
+
+<!-- UNREAL ENGINE MATERIALS -->
+<div class = "content__section" id="materials">
+    <h1 class = "content__title content__title__glitch" data-text="Unreal Engine Materials">Unreal Engine Materials</h1>
+    <div class="cardview__list">
+        <app-cardview *ngFor="let model of listMaterials" [model]="model"></app-cardview>
+    </div>
+</div>
+
+<!-- MOTION GRAPHICS & INFINITE LOOPS -->
+<div class = "content__section" id="mographics">
+    <h1 class = "content__title content__title__glitch" data-text="Motion Graphics">Motion Graphics</h1>
+    <div class="cardview__list">
+        <app-cardview *ngFor="let model of listMotionGraphics" [model]="model"></app-cardview>
+    </div>
+</div>

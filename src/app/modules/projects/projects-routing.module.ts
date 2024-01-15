@@ -7,6 +7,7 @@ import { MotionGraphicsComponent } from "src/app/components/projects/motion-grap
 import { RetroComponent } from "src/app/components/projects/motion-graphics/retro/retro.component";
 import { NodeExpressApiComponent } from "src/app/components/projects/node-express-api/node-express-api.component";
 import { OtherUnrealEngineProjectsComponent } from "src/app/components/projects/other-unreal-engine-projects/other-unreal-engine-projects.component";
+import { ProjectsHomeComponent } from "src/app/components/projects/projects-home/projects-home.component";
 import { RealDisunityComponent } from "src/app/components/projects/real-disunity/real-disunity.component";
 import { ReturnalUnrealEngineComponent } from "src/app/components/projects/returnal-unreal-engine/returnal-unreal-engine.component";
 import { ShutdownComponent } from "src/app/components/projects/shutdown/shutdown.component";
@@ -30,6 +31,10 @@ export const routes: Routes = [
         path: '',
         component: ProjectsComponent,
         children: [
+            { 
+                path: ProjectUrls.HOME,
+                component: ProjectsHomeComponent
+            },
             { 
                 path: ProjectUrls.BOUNDEAD,
                 component: BoundeadComponent

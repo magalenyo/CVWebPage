@@ -278,6 +278,13 @@
     height: 24px;
 }
 
+.links__routing {
+    display: flex;
+    font-size: 24px;
+    justify-content: center;
+    gap: 16px;
+}
+
 @keyframes anim__svg__glitch {
     0% {
         clip: rect(65px, 24px, 1px, 0);
