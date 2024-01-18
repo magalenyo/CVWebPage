@@ -25,24 +25,14 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     console.log("%cWhat are you looking at 👀?!", "color: green");
   
-    // this.routerEventsSubscription = this.router.events.subscribe((event) => {
-    //   console.log(this.router)
-    //   if (event instanceof NavigationEnd) {
-    //     this.showFooter = this.router?.url !== AppUrls.EMPTY_HOME && this.router?.url !== AppUrls.HOME;
-    //   }
-    // })
-
     this.routerEventsSubscription = this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: NavigationEnd) => {
-      // Check the URL and set the flag accordingly
       if (event.url !== AppUrls.EMPTY_HOME && event.url !== ("/" + AppUrls.HOME)) {
         this.showFooter = true;
       } else {
         this.showFooter = false;
       }
-      // this.showFooter = event?.url !== AppUrls.EMPTY_HOME || event?.url !== AppUrls.HOME;
-      console.log(this.showFooter);
     });
   }
   

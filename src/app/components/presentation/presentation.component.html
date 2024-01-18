@@ -7,25 +7,29 @@
 </svg>
 
 <div *ngIf="useVideo" class = "presentation__video__container">
-    <div class = "presentation__video__content">
+    <div class = "presentation__video__content" routerLink="/projects#materials">
         <video id = "presentationVideo" class ="presentation__video" playsinline muted="true" defaultMuted loop src="assets/images/ue-materials/dragon/cardview.mp4" onmouseover="this.play()" onmouseout="this.pause();"></video>
         <p class="presentation__video__text">Unreal Engine 5 Materials</p>
     </div>
-    <div class = "presentation__video__content">
+    <div class = "presentation__video__content" routerLink="/projects/shutdown">
         <video id = "presentationVideo" class ="presentation__video" playsinline muted="true" defaultMuted loop src="assets/videos/cards/shutdown-trimmed-2.mp4" onmouseover="this.play()" onmouseout="this.pause();"></video>
         <p class="presentation__video__text">Top down shooter in Inhouse Engine</p>
     </div>
-    <div class = "presentation__video__content">
+    <div class = "presentation__video__content" routerLink="/projects/returnal-unreal-engine">
         <video id = "presentationVideo" class ="presentation__video" playsinline muted="true" defaultMuted loop src="assets/videos/cards/returnal-ue-trimmed.mp4" onmouseover="this.play()" onmouseout="this.pause();" [currentTime]="2"></video>
         <p class="presentation__video__text">PS5 Returnal in Unreal Engine 5</p>
     </div> 
-    <div class = "presentation__video__content">
+    <div class = "presentation__video__content" routerLink="/projects/bullet-heaven-unreal-engine">
         <video id = "presentationVideo" class ="presentation__video" playsinline muted="true" defaultMuted loop src="assets/videos/cards/bullet-heaven-trimmed.mp4" onmouseover="this.play()" onmouseout="this.pause();"></video>
         <p class="presentation__video__text">Bullet Heaven Shooter in Unreal Engine 5</p>
     </div>
-    <div class = "presentation__video__content">
+    <div class = "presentation__video__content" routerLink="/projects/boundead">
         <video id = "presentationVideo" class ="presentation__video" playsinline muted="true" defaultMuted loop src="assets/videos/cards/boundead-trimmed.mp4" onmouseover="this.play()" onmouseout="this.pause();"></video>
         <p class="presentation__video__text">Action Adventure game in Unity</p>
+    </div>
+    <div class = "presentation__video__content" routerLink="/projects/boundead">
+        <video id = "presentationVideo" class ="presentation__video" playsinline muted="true" defaultMuted loop src="assets/videos/cards/projects-trimmed.mp4" onmouseover="this.play()" onmouseout="this.pause();"></video>
+        <p class="presentation__video__text">All projects</p>
     </div>
 </div>
 
