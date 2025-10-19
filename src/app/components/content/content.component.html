@@ -1,76 +1,159 @@
-<div style="display:none" class = "body__separator"></div>
+<div style="display: none" class="body__separator"></div>
 
-<div id = "content" class = "content__body">
+<div id="content" class="content__body">
+  <!-- ABOUT ME -->
+  <div class="content__section" id="aboutme">
+    <h1 class="content__title content__title__glitch" data-text="About me">
+      About me
+    </h1>
 
-    <!-- ABOUT ME -->
-    <div class = "content__section" id="aboutme">
-        <h1 class = "content__title content__title__glitch" data-text="About me">About me</h1>
-
-        <div class = "content__bio__wrapper">
-            <div class ="bio__image__wrapper">
-                <img src = "assets/images/profile-picture.jpg" class = "profilePicture">
-                <div class = "bioGrid">
-                    <p><fa-icon [icon]="faMap" [fixedWidth]="true"></fa-icon> </p> <p>Barcelona, Spain</p>
-                    <p><fa-icon [icon]="faMail" [fixedWidth]="true"></fa-icon> </p> <p><a href = "mailto: magalenyo7@gmail.com">magalenyo7@gmail.com</a></p>
-                    <p><fa-icon [icon]="faPhone" [fixedWidth]="true"></fa-icon> </p> <p><a href = "tel:+34671116223">+34 671 11 62 23</a></p>
-                </div>
-            </div>
-
-            <div class ="bio__text__wrapper">
-                <p class="content__text">Greetings! My name is Miguel, a 27-year-old Computer Engineer with a specialization in Software Development. My deep-seated love for video games propelled me to earn a <i>Master's Degree in Advanced Programming for AAA Video Games</i> from Universitat Politècnica de Catalunya (UPC).</p>
-                <p class="content__text">I am currently employed as a Full Stack Developer at Next Digital, collaborating with Iberia Airlines. Boasting over four years of professional experience, I've honed my skills in web development across various technologies such as <b>Angular</b>, <b>Java Springboot</b>, <b>React</b>, <b>NestJS</b>, and more, contributing to projects in the insurance sector and for Iberia Airlines.</p>
-                <p class="content__text" style="display: inline; margin-right: 6px">My relentless curiosity and eagerness to explore diverse technologies have shaped me into a highly adaptable and proactive</p><p class="content__text content__text__glitch" style="display: inline-block" data-text="person."> programmer.</p>
-                <p class="content__text">Beyond my professional pursuits, I am passionately drawn to video game development, 3D rendering and modeling, app development, and even the culinary arts!</p>
-                <a class = "content__button content__button__glitch" data-text="Download CV" href="assets/pdf/CV_2023_MiguelAngelBuenoRivera.pdf" download>Download CV</a>
-            </div>
+    <div class="content__bio__wrapper">
+      <div class="bio__image__wrapper">
+        <img src="assets/images/profile-picture.jpg" class="profilePicture" />
+        <div class="bioGrid">
+          <p><fa-icon [icon]="faMap" [fixedWidth]="true"></fa-icon></p>
+          <p>Barcelona, Spain</p>
+          <p><fa-icon [icon]="faMail" [fixedWidth]="true"></fa-icon></p>
+          <p><a href="mailto: magalenyo7@gmail.com">magalenyo7@gmail.com</a></p>
+          <p><fa-icon [icon]="faPhone" [fixedWidth]="true"></fa-icon></p>
+          <p><a href="tel:+34671116223">+34 671 11 62 23</a></p>
         </div>
-    </div>
+      </div>
 
-    <!-- PROJECTS -->
-    <div class = "content__section" id="projects">
-        <h1 class = "content__title content__title__glitch" data-text="Projects">Projects</h1>
-        <div class="cardview__list">
-            <app-cardview *ngFor="let model of listProjects" [model]="model"></app-cardview>
-        </div>
-    </div>
+      <div class="bio__text__wrapper">
+        <p class="content__text">
+          Greetings! My name is Miguel, a 29-year-old Computer Engineer
+          specialized in
+          <b>Software Development</b>. My lifelong passion for video games
+          inspired me to earn a
+          <i>Master's Degree in Advanced Programming for AAA Video Games</i>
+          from <b>Universitat Politècnica de Catalunya (UPC)</b>.
+        </p>
 
-    <!-- UNREAL ENGINE MATERIALS -->
-    <div class = "content__section" id="materials">
-        <h1 class = "content__title content__title__glitch" data-text="Unreal Engine Materials">Unreal Engine Materials</h1>
-        <div class="cardview__list">
-            <app-cardview *ngFor="let model of listMaterials" [model]="model"></app-cardview>
-        </div>
-    </div>
+        <p class="content__text">
+          I currently work as a <b>Full&nbsp;Stack&nbsp;Developer</b> at
+          <b>Next&nbsp;Digital</b>, collaborating with <i>Iberia Airlines</i>.
+          With over <b>six years of professional experience</b>, I’ve built a
+          strong background in developing <b>scalable</b>, <b>high-quality</b>,
+          and <b>well-tested</b> web applications using technologies such as
+          <b>Angular</b>, <b>React</b>, <b>Java&nbsp;Spring&nbsp;Boot</b>,
+          <b>NestJS</b>, and <b>Python</b>. My work emphasizes clean
+          architecture, performance, and maintainability across both frontend
+          and backend systems.
+        </p>
 
-    <!-- MOTION GRAPHICS & INFINITE LOOPS -->
-    <div class = "content__section" id="mographics">
-        <h1 class = "content__title content__title__glitch" data-text="Motion Graphics">Motion Graphics</h1>
-        <div class="cardview__list">
-            <app-cardview *ngFor="let model of listMotionGraphics" [model]="model"></app-cardview>
-        </div>
-    </div>
+        <p class="content__text" style="display: inline; margin-right: 6px">
+          My relentless curiosity and drive to explore emerging technologies
+          have made me a highly adaptable, detail-oriented, and proactive
+        </p>
+        <p
+          class="content__text content__text__glitch"
+          style="display: inline-block"
+          data-text="developer."
+        >
+          developer.
+        </p>
 
-    <!-- EDUCATION -->
-    <div class = "content__section" id="education">
-        <h1 class = "content__title content__title__glitch" data-text="Education">Education</h1>
-        <div class = "content__wrapper">
-            <p class = "content__text">I have always been interested in computers, specially videogames and hardware, and the reason I got into the degree was to end up being a video games programmer, but ended up loving any kind of software development.</p>
-            <p class = "content__text">I had never programmed before, I actually didn't even know what programming was until I got in the degree, and absolutely loved it!</p>
-            <div class = "stepper__wrapper">
-                <app-stepper-education></app-stepper-education>
-            </div>
-        </div>
-    </div>
+        <p class="content__text">
+          Beyond my professional pursuits, I’m deeply passionate about
+          <b>video game development</b>, <b>3D rendering and modeling</b>,
+          <b>app development</b>, and even the <b>culinary arts</b> — always
+          seeking creativity and challenge in everything I do.
+        </p>
 
-    <!-- EXPERIENCE -->
-    <div class = "content__section" id="experience">
-        <h1 class = "content__title content__title__glitch" data-text="Experience">Experience</h1>
-        <div class = "content__wrapper">
-            <p class = "content__text">From restaurants to clothing companies, I have always been working to afford my education and needs. It wasn't until I graduated from Computer Engineering that I started my professional career in the IT sector.</p>
-            <div class = "stepper__wrapper">
-                <app-stepper-experience></app-stepper-experience>
-            </div>
-        </div>
+        <a
+          class="content__button content__button__glitch"
+          data-text="Download CV"
+          href="assets/pdf/CV_2023_MiguelAngelBuenoRivera.pdf"
+          download
+        >
+          Download CV
+        </a>
+      </div>
     </div>
+  </div>
 
+  <!-- PROJECTS -->
+  <div class="content__section" id="projects">
+    <h1 class="content__title content__title__glitch" data-text="Projects">
+      Projects
+    </h1>
+    <div class="cardview__list">
+      <app-cardview
+        *ngFor="let model of listProjects"
+        [model]="model"
+      ></app-cardview>
+    </div>
+  </div>
+
+  <!-- UNREAL ENGINE MATERIALS -->
+  <div class="content__section" id="materials">
+    <h1
+      class="content__title content__title__glitch"
+      data-text="Unreal Engine Materials"
+    >
+      Unreal Engine Materials
+    </h1>
+    <div class="cardview__list">
+      <app-cardview
+        *ngFor="let model of listMaterials"
+        [model]="model"
+      ></app-cardview>
+    </div>
+  </div>
+
+  <!-- MOTION GRAPHICS & INFINITE LOOPS -->
+  <div class="content__section" id="mographics">
+    <h1
+      class="content__title content__title__glitch"
+      data-text="Motion Graphics"
+    >
+      Motion Graphics
+    </h1>
+    <div class="cardview__list">
+      <app-cardview
+        *ngFor="let model of listMotionGraphics"
+        [model]="model"
+      ></app-cardview>
+    </div>
+  </div>
+
+  <!-- EDUCATION -->
+  <div class="content__section" id="education">
+    <h1 class="content__title content__title__glitch" data-text="Education">
+      Education
+    </h1>
+    <div class="content__wrapper">
+      <p class="content__text">
+        I have always been interested in computers, specially videogames and
+        hardware, and the reason I got into the degree was to end up being a
+        video games programmer, but ended up loving any kind of software
+        development.
+      </p>
+      <p class="content__text">
+        I had never programmed before, I actually didn't even know what
+        programming was until I got in the degree, and absolutely loved it!
+      </p>
+      <div class="stepper__wrapper">
+        <app-stepper-education></app-stepper-education>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <div class="content__section" id="experience">
+    <h1 class="content__title content__title__glitch" data-text="Experience">
+      Experience
+    </h1>
+    <div class="content__wrapper">
+      <p class="content__text">
+        From restaurants to clothing companies, I have always been working to
+        afford my education and needs. It wasn't until I graduated from Computer
+        Engineering that I started my professional career in the IT sector.
+      </p>
+      <div class="stepper__wrapper">
+        <app-stepper-experience></app-stepper-experience>
+      </div>
+    </div>
+  </div>
 </div>
